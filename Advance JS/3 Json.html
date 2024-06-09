@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="x"></h1>
+    <button onclick="GetText()">GetText</button>
+    <button onclick="GetJson()">GetJson</button>
+    <button onclick="GetAPI()">GetAPI</button>
+    
+
+
+</body>
+
+<script>
+
+    // JSON :- JavaScript Object Notation       // json nothing without object.;-
+    // API  :-Aplication Programing Interface   // all programin language main chalti hai. php,python etc...
+
+    // syntax :-
+    // fetch('path/fileName/type').then().then()  // fatch the data.
+
+
+    // fetch("3.1 txtfile.txt")     // same as src.txt file ka data fetch karvana hai.
+
+    // .then((anyname)=>{            // function call hoga.with any name 
+    //     // console.log(anyname) 
+    //     // anyname.text()        // without return undifind ayega.  
+    //     return anyname.text()  // always return karan padega.nahi to data display nahi karega.
+    // })                          
+
+    // .then((anydtnm)=>{           // outpute dega.
+    //     console.log(anydtnm)     // output console main
+    //     // document.write(anydtnm)  // output body main.
+    //     document.getElementById("x").innerHTML = anydtnm
+
+    // })         
+
+    // ager ahme data click pe show karna hai.you can use the function and inside the data
+
+    function GetText()
+    {
+        fetch("3.1 txtfile.txt")
+        .then((anyname)=>{return anyname.text()})
+        .then((op)=>{document.getElementById("x").innerHTML=op})
+
+    }
+    
+
+    function GetJson() 
+    {
+        fetch("3.2 data.Json")                         // get the json file
+        .then((anyname)=>{return anyname.json()})     
+        .then((op)=>{document.getElementById("x").innerHTML=op})
+
+    }
+
+
+    function GetAPI()
+    {
+        fetch("https://jsonplaceholder.typicode.com/users")        //search json placeholder in google and set any API file
+        .then((anyname)=>{return anyname.json()})     
+        .then((op)=>{document.getElementById("x").innerHTML=op})
+
+    }
+
+    console.log(GetAPI)
+     
+
+</script>
+</html>

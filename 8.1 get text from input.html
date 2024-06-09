@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- <input type="text" id="inp" onkeypress="GetText()"> -->
+
+     <!-- <input type="text" id="inp" onkeydown="GetText()"> -->
+
+    <!-- <input type="text" id="inp" onblur="GetText()"> -->
+
+    <input type="text" id="inp" onkeyup="GetText()">
+<br><br>
+
+    <textarea id="txtarea" ></textarea>
+    
+
+    <script>
+
+
+inp_tag= document.getElementById("inp")
+txtarea_tag= document.getElementById("txtarea")
+
+function GetText()
+
+{
+    txtarea_tag.value=inp_tag.value
+    inp_tag.style.color="red"
+    txtarea_tag.style.color="red"
+}
+
+    </script>
+</body>
+</html>

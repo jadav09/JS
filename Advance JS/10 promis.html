@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        // class T
+
+        // {
+        //     constructor(x,y)         
+
+        //     {
+        //         document.write(x+" "+y)
+        //     }
+        // }
+
+        // const xyz = new T(12,()=>{});    // // constructer ek function hai. to uske peramiter main koi bhi value pass kar sak te hai.
+
+
+
+        // Promise************
+
+       
+
+
+
+        const p = new Promise((r,e)=>{          
+            return r("xyz")
+        })
+
+         //==> Promise.then() takes two arguments, a callback for success and another for failure.
+
+        p.then(
+            (res)=>{console.log(res)},       // you can use any name.
+            (err)=>{ console.log(err)}
+        )
+
+
+
+
+        // how to display results in Promise:-
+
+       const mypromise = new Promise(
+        (x,y)=>{
+            
+            ravi=1 
+            if(ravi)                      // match the condition
+            {
+                return x ("connected")     // if condition is true than retrun x
+            }
+
+            else 
+            {
+                return y ("not connected") // if condition is false then return y
+            }
+        }
+       )
+
+       mypromise.then(                      
+        (success)=>{console.log(success)},
+        (failure)=>{console.log(failure)}
+       )
+
+
+
+
+    function abc(anyname)       // then ke arguments throw function call hoga.
+
+    {
+        console.log(anyname) 
+
+    }
+
+
+
+       const jadav =new Promise(
+        (x,y)=>{
+            xyz =1
+
+            if(xyz)
+            {
+                return x ("success")
+            }
+            else
+            {
+                return y ("failure")
+            }
+
+        }
+
+       )
+
+
+       jadav.then(
+        (sec)=>{abc(sec)},    // then ke arguments main function hai.to wo function k throw value access hogo.
+        (fail)=>{abc(faill)}
+       )
+
+    </script>
+    
+</body>
+</html>

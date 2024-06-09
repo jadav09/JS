@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="JQuiry/jaydeep.js"> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+
+<body>
+
+    <!-- Price: <input type="text" value="200" id="price" />
+
+    <select id="quantity" onchange="GetPrice()">
+
+        <option hidden>--- Select Quantity --- </option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+
+    </select>
+
+    = <b id="res"></b>
+
+    <script>
+
+        inp_tag = document.getElementById("price")
+        sec_tag = document.getElementById("quantity")
+        b_tag = document.getElementById("res")
+
+        function GetPrice() {
+            b_tag.innerHTML = inp_tag.value * sec_tag.value
+            b_tag.style.color = "green"
+
+        }
+
+        console.log(inp_tag);
+        console.log(inp_tag.value);//200
+        console.log(inp_tag.type);
+        console.log(inp_tag.id);
+
+
+
+    </script> -->
+
+
+
+
+    Price: <input type="text" value="200" id="inp">
+
+    <select name="" id="sec" onchange="hij()">
+
+<option value="" >select quantity</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select>
+
+    <b id="b1"></b>
+    
+    <script>
+
+    inp_tag = document.getElementById("inp")
+    sec_tag = document.getElementById("sec")
+    b1_tag = document.getElementById("b1")
+
+
+    console.log(inp_tag)
+
+
+    function hij()
+
+    {
+        
+        b1_tag.innerHTML= inp_tag.value*sec_tag .value
+        b1_tag.style.color="green"
+
+
+        // ==> creat for jQuery
+
+        // $("b").html( $("input").val()*$("select").val())
+        // $("b").css("color","green")
+    }
+    
+
+    </script>
+
+</body>
+
+</html>

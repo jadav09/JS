@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text">
+    <h1 id="x"></h1>
+
+
+
+    </table>
+
+    <script>
+
+       h1_tag=  document.getElementById("x")
+       h1_tag.innerHTML="kaulj"
+
+
+obj=[
+
+        {name:"bhuro"},
+        {name:"jaydeep"},
+        {name:"mayuri"},
+        {name:"nilo"},
+        {name:"ravi"}
+    ]
+
+
+    h=`<table border="1">
+        <tr>
+            <td>Name</td>
+        </tr>
+        `
+
+
+    obj.map((v)=>{
+
+
+        h=h+ `<tr>
+            <td>${v.name}</td></tr>` +"<br>"
+
+        h1_tag.innerHTML=h +`</table>`
+    })
+
+
+
+    </script>
+    
+</body>
+</html>

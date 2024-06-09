@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <img src="" alt="" height="100" width="100" id="img">
+    
+    <img src="https://media.architecturaldigest.com/photos/63079fc7b4858efb76814bd2/16:9/w_4000,h_2250,c_limit/9.%20DeLorean-Alpha-5%20%5BDeLorean%5D.jpg" alt="" height="100" id="img1">
+
+    <img src="https://media.architecturaldigest.com/photos/63079fc7b4858efb76814bd2/16:9/w_4000,h_2250,c_limit/9.%20DeLorean-Alpha-5%20%5BDeLorean%5D.jpg" alt="" height="100" id="img2">
+    <img src="" alt="">
+
+    <!-- <img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/09/c3/33/97.jpg" alt=""> -->
+
+    <button onclick="i()">Get Image</button>
+    <button onclick="i1()">Change Image</button>
+    <button onclick="i2()">Change from 1 to 2 and 2 to 1</button>
+</body>
+<SCript>
+
+img_tag=document.getElementById("img")
+img1_tag=document.getElementById("img1")
+img2_tag=document.getElementById("img2")
+
+function i(i)
+
+{
+
+    img_tag.src="https://media.tacdn.com/media/attractions-splice-spp-674x446/09/c3/33/97.jpg"
+    // img1_tag.src="https://media.tacdn.com/media/attractions-splice-spp-674x446/09/c3/33/97.jpg"
+
+}
+
+function i1()
+{
+    img1_tag.src="https://i.ytimg.com/vi/OKZFHo5p4VA/maxresdefault.jpg"
+}
+
+function i2()
+
+{
+    if(img2_tag.src.match("https://media.architecturaldigest.com/photos/63079fc7b4858efb76814bd2/16:9/w_4000,h_2250,c_limit/9.%20DeLorean-Alpha-5%20%5BDeLorean%5D.jpg"))
+
+    {
+        img2_tag.src="https://media.tacdn.com/media/attractions-splice-spp-674x446/09/c3/33/97.jpg"
+
+    }
+    else
+    {
+        img2_tag.src="https://media.architecturaldigest.com/photos/63079fc7b4858efb76814bd2/16:9/w_4000,h_2250,c_limit/9.%20DeLorean-Alpha-5%20%5BDeLorean%5D.jpg"
+    }
+
+}
+
+console.log(img_tag)
+</SCript>
+</html>

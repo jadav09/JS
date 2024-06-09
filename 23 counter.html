@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="hitesh"></h1>
+
+    <!-- setTimeout == inside function as recurive==> call the function first
+    setInterval == outside function as recurive==>need not to call the function  -->
+
+    <script>
+
+             x=0;
+
+            function counter()
+            {
+                if(x<=653)
+                {
+                    document.getElementById('hitesh').innerHTML = (x);//0
+                    x++;//1
+                    // counter()
+                    // setInterval(counter)
+                    
+                }
+
+                setTimeout(counter)
+                
+            }
+
+         counter()                          // call it and dirct count karega.
+            //  setInterval(counter,4000)  // ==> 4sec ke bad count karega.
+            // setTimeout(counter,1000)   //==> 4sec ke bad count hoga.
+
+
+
+        // *******intervel couner********
+
+
+        // num=0
+
+        // function count()
+
+        // {
+        //     if(num<=569)
+
+        //     {
+        //         document.getElementById("hitesh").innerHTML= (num);
+        //         num++
+
+        //         setInterval(count,2000)  
+
+        //     }
+
+        // }
+        // setInterval(count,2000)
+
+// setInerval counter breck lete hua print karega.
+// 
+
+// ****time-out counter***
+
+
+// y=0
+
+// function count1()
+// {
+
+//     if(x=y<=100)
+//     {
+//         document.getElementById("hitesh").innerHTML=y
+//         y++
+
+
+//         setTimeout(count1,1000)  // setTime out every number ke 1 sec ke hisab se print kaega.
+//     }
+// }
+// setTimeout(count1)
+
+
+
+
+
+
+// z=0
+
+// function count2()
+// {
+//     if(z<=308)
+//     {
+//         document.getElementById("hitesh").innerHTML=z
+//         z++
+//         setTimeout(count2,1000)  //==> every number print in 1sec 
+//     }
+// }
+// setTimeout(count2,5000)  //==>star time 5sec lega.
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

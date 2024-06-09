@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        // HOF :- HIGHER ORDER FUNCTION
+
+        const hof = function Test()
+        {
+            document.write("test fun...!");
+        }
+
+       hof();
+        
+
+
+        const hof1 = function Test1()
+
+        {
+            return "test 1"
+        } 
+
+        document.write(hof1())    
+        
+        // return :- without print code exucate nahi hoga.
+        // return always call the function in variable name.
+
+
+
+
+
+        
+       const radius = [10,20,30,40,50];
+
+    // functions syntex on map,fillter $ reduce:-
+  const Area =  radius.map(function test(val,index,arr)
+
+  {
+    // return val;
+    // return index;
+    // return arr;
+   })
+   console.log(Area)
+
+
+
+
+// call the function without name :- anonymous functon.
+
+const area1 =    radius.map (function (v,i,a){
+
+    return v;
+})
+
+console.log(area1)
+
+
+
+// call that arrow function.
+
+const area2 =  radius.map( (v,i,a) =>{
+
+    return v;
+    
+})
+
+console.log(area2)
+
+
+
+// *******8
+
+
+var op =[]
+
+for(x=0;x<radius.length;x++)
+{
+    op.push(radius[x]*radius[x]*Math.PI)
+}
+
+console.log(op)
+
+
+// ********
+
+
+dj =[10,20,30,40,50]
+
+
+const res = dj.forEach((v)=>{
+
+    console.log(v*v*Math.PI)
+    // return v;
+})
+console.log(res)      // not allow return keyword in forEach loop. always undifiend
+
+// ==>forEach kabhi bhi return nahi kar sar ta. console kar sak ta hai.
+
+// ==> use on map to return it.
+
+const res1 = dj.map((v)=>{
+
+    return v*v*Math.PI                  //without for loop get the math value.
+})
+
+
+console.log(res1)
+
+
+
+// all loops revisions:-
+
+const word1 = ["hii","jadav","what","is","error","in","code"]
+
+// for loop:-
+
+// for(i=0;i<word1.length;i++)
+// {
+//     console.log(word1[i])
+// }
+
+// while loop:-
+
+// i=0;
+// while(i<word1.length)
+// {
+//     console.log(word1[i])
+//     i++;
+// }
+
+// do while loop:-
+
+// i=0;
+// do {
+//     console.log(word1[i])
+//     i++;
+// } while (i<word1.length);
+
+
+// for in loops:-
+
+// for(x in word1)
+// {
+
+//     console.log(x)
+// }
+
+
+// for of loop :-
+
+// for(x of word1)
+// {
+//     console.log(x)
+// }
+
+// forEach loop:-  function pe work ho ta hai or forEach kabhi return nahi kar sak ta.
+
+word1.forEach((val,index,arr)=>{
+    // console.log(val)
+    // console.log(index)
+    // console.log(arr)
+})
+
+
+
+
+// map,filter or reduce sabhi array pe oprationn karne ke liye hai. 
+// likin sabhi diffrent diffrent way pe use kiye jate hai
+
+
+
+arr=[1,2,3,4,5,6,7,8,9,10]
+
+const prs =arr.map((v)=>{
+    // console.log(v+2)
+    return v+5
+})
+
+console.log(prs)                 // without conditons map arry pe oprations kar sak ta hai.
+
+
+const prs1 =arr.filter((v,i)=>{
+    // console.log(v+2)
+    // return v+5
+    return i     // filter second value return always next value.
+})
+console.log(prs1)              // without conditons filter arry pe oprations nahi kar sak ta hai.(not use without condition.)
+
+
+const prs3 =arr.filter((v)=>{
+    // console.log(v+2)
+    return v%5==0
+})
+console.log(prs3)             // condition base work on filter.
+
+
+jadav1=arr.forEach((v)=>
+{
+return v
+})
+console.log(jadav1)
+
+
+
+abc =[1,2,3,4,5]
+
+a=0
+
+for(i=0;i<abc.length; i++)
+{
+    console.log(abc[i])
+a= abc[i]+a
+}
+console.log(a)    // 15  without redusce total sum abc value.use for loop. 
+
+
+
+
+
+// reduce ki first value current and secound value next hoti hai.
+
+const sum1 = abc.reduce((cur,next)=>{  
+    
+    // console.log(cur)      // 1
+    // console.log(next)    // 2,3,4,5  sa bhi next dega.
+    return (cur+next)   //15
+})
+console.log(sum1)
+
+
+
+
+// *********
+
+name2 ="Hello Dharmesh How Are You..!"
+
+console.log(name2[6])   //only D dega.
+
+// ager hame sabhi words ka first latter print karvana hai?
+
+console.log(name2.split(" "))                // split js mehod hai. name2 main jaha space milegi vaha se cut kar dega.
+
+
+name2.split(" ").map((v)=>{
+    console.log(v[0])
+
+})
+
+// name2.split(" ") = array hai(check console that's arry). to hum map mathod use kar sak te hai.
+ 
+//  ==> array per to hum koi bhi method use kar sak te hai.
+
+op=name2.split(" ").map((v)=>{
+
+    return v[0]
+    
+}).join("...")
+console.log(op)
+
+
+
+// ****************
+
+
+ar1=[1,2,3]
+ar2=[4,5,6]
+ar3=[7,8,9]
+
+
+console.log(ar1.join("x"))           // join method join array value.
+console.log(ar1.concat(ar2,ar3))    // concat method join array.
+
+
+
+
+
+    </script>
+</body>
+</html>

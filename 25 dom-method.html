@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 id="h1">heading 1</h1>
+    <h1 id="h1">heading 1</h1>
+<hr>
+    <h2 class="h2_tag"> heading 2</h2>
+    <h2 class="h2_tag"> heading 2</h2>
+    <h2 class="h2_tag"> heading 2</h2>
+    <h2 class="h2_tag"> heading 2</h2>
+<hr>
+
+
+    <span id="sp">sp 1</span>
+    <span id="sp">sp 1</span>
+    <span id="sp">sp 1</span>
+    <span id="sp">sp 1</span>
+
+<hr>
+
+
+    <h3>Heading 3</h3>
+    <h3>Heading 3</h3>
+    <h3>Heading 3</h3>
+    <h3>Heading 3</h3>
+
+<hr>
+
+
+    <p name="para">para 1</p>
+    <p name="para">para 1</p>
+    <p name="para">para 1</p>
+    <p>para 1</p>
+    <p>para 1</p>
+
+    <hr>
+
+    <b class="c1">BOLD CLASS</b>
+    <hr>
+    <b id="c1">BOLD ID</b>
+
+    <script>
+
+
+
+// kisi bhi tag main se id ko celect karne ke liye  
+
+        x = document.getElementById('h1');  // only get fot one id.
+        console.log(x)
+        x.style.color="red"   // same h1 id main se first h1 id ko pick karega.
+
+
+
+// ek se jyada class hia to sabhi ko ek satha select karne ke  liye.
+
+        y = document.getElementsByClassName('h2_tag');  // get multipale classes
+        console.log(y)
+
+        // y.style.color="green"    //==> color apply nahi hoga. kyu ki vo (h2_tag) konsa hai patani chalega without array concept
+
+        y[2].style.color="green" //==> green goha.lekin dispaly naki karega.kyu ki uper first vali condition ki earr a rahi hai so please comments out ths
+
+    
+
+
+        // direct tag ko select karne ki liye (selected by maltiple tags)
+        
+        z = document.getElementsByTagName('h3');   // get multipale tags
+        console.log(z)
+
+        z[1].style.backgroundColor="powderblue"  //use this style with array concept.
+
+
+
+        // kisi bhi tag ko name de ke select karne kiye
+        a = document.getElementsByName('para')
+        console.log(a)
+
+        a[0].style.backgroundColor="gold" //use this style with array concept.
+
+
+
+//  /       class or id ke name se select karne ke liye.
+
+        p = document.querySelector('.c1')  //only class ko tag karega/.
+        console.log(p)
+
+        p.innerHTML="querySelector get the class"
+
+        q = document.querySelector('#c1')  // only get the id
+        console.log(q)
+        q.innerHTML="querySelector get the id"
+
+
+
+        // ek sath sabhi class or id ko select karne ke liye.
+
+        getClass =  document.querySelectorAll(".h1")
+        console.log(getClass)
+
+        getId =  document.querySelectorAll("#sp")
+        console.log(getId)
+
+
+
+a
+
+    </script>
+
+</body>
+</html>

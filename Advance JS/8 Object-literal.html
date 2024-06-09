@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+           // object-literal : when function is the value of the index of an object it becomes object-literal
+           
+         obj={
+
+            name:"jadav",
+            age:12,
+            course:"WD",
+            hobbies:"cricket",
+            f:function x()
+            {
+                return obj.age  + " " + this.course  // this key word it's object. this main object milega.
+
+            }
+        }
+
+         console.log(obj.name)
+
+         console.log(obj.f())   // object ke under function ho to hame call karte time perantheiss lagana padega.
+         
+    </script>
+</body>
+</html>

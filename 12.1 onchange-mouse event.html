@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <!-- on click -->
+
+
+    <p id="p1">Para</p>
+
+
+    <button onclick="ChangeText()">mouse click </button> 
+    <button onmouseenter="ChangeText()"> mouce enter</button>
+    <button onmouseleave="ChangeText()"> mouce leave</button>
+
+    <script>
+
+
+ p_tag = document.getElementById('p1'); // get the id
+
+console.log(p_tag.innerHTML);//Para  // console.pera
+
+       function ChangeText()
+       {
+        if(p_tag.innerHTML=="Para")
+            {
+               
+                 p_tag.innerHTML = "Devarsh"
+            }
+
+            else 
+            {
+                p_tag.innerHTML="Para"
+            }
+       }
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

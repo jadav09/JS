@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .main
+
+        {
+            display: flex;
+            justify-content: space-evenly;
+            background-color: powderblue;
+        }
+
+        .w1,.w2
+
+        {
+            width: 45%;
+            position: relative;
+        }
+
+        .w1 img
+        {
+            height: 300px;
+            width: 550px;
+            background: url(../images/fall\ ahed.jpg);
+            background-size: cover;
+            transition: 1s;
+        }
+        
+        .w2 img
+        {
+            height: 300px;
+            width: 550px;
+            background: url(../images/fall\ ahed2.jpg);
+            background-size: cover;
+            transition: 1s;
+
+
+            
+        }
+        .efect
+        {
+            height: 250px;
+            width: 450px;
+            border: 5px solid white;
+            position: absolute;
+            top: 10%;
+            left: 0%;
+            visibility: hidden;
+            transition: 1s;
+        }
+
+        /* .w1:hover .efect,
+        .w2:hover .efect
+        {
+            visibility: visible;
+            left: 10%;
+        
+        } */
+
+
+        .w1:hover img,
+        .w2:hover img
+        {
+            background-position-x: -50%;
+        }
+
+
+    </style>
+
+</head>
+<body onscroll="jadav()">
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam quaerat voluptas odit ipsam, sequi voluptatem maiores similique eos eius eum asperiores, at illum repudiandae autem? Velit autem nisi voluptatem molestiae repudiandae alias est porro quam odio totam, dolorem sapiente consequuntur animi in, praesentium quis accusantium quaerat. Sapiente similique sint atque sed cum laborum ea eveniet, in quas. Repellat, quo. Deserunt fuga at dolor incidunt non est, rem et, repellat similique, ea veniam. Ipsum vitae consequatur quia ipsam placeat fugit odio ipsa facilis quisquam sed, magni porro aliquam qui fugiat similique dolor minus officia nesciunt pariatur itaque nostrum? Odit vitae maxime a esse cupiditate, veniam adipisci, vero laborum fugit iure quaerat dolorum! Recusandae, molestiae quibusdam! Eum, est blanditiis. Est error in, quasi aliquid consequatur quod esse pariatur laboriosam qui id quas, enim voluptatem obcaecati optio porro consequuntur ducimus ipsum odio, vel culpa inventore ex. Saepe sed tenetur modi debitis aperiam aliquam sequi, architecto id! Aut esse amet mollitia consequuntur ipsam veniam architecto voluptate sapiente autem modi provident quod nostrum nobis dignissimos non corrupti optio sit dolorum impedit pariatur voluptates, nulla ab. Nobis eos, nisi reprehenderit, quibusdam fuga mollitia nemo iusto qui magni iusa quos nostrum inventore cupiditate adipisci.icing elit. Tenetur quidem mollitia excepturi necessitatibus a neque doloremque, quo eligendi perferendis accusamus, ullam consectetur impedit quas? Ipsa quos nostrum inventore cupiditate adipisci.icing elit. Tenetur quidem mollitia excepturi necessitatibus a neque doloremque, quo eligendi perferendis accusamus, ullam consectetur impedit quas? Ipsa quos nostrum inventore cupiditate adipisci.icing elit. Tenetur quidem mollitia excepturi necessitatibus a neque doloremque, quo eligendi perferendis accusamus, ullam consectetur impedit quas? Ipsa quos nostrum inventore cupiditate adipisci.icing elit. Tenetur quidem mollitia excepturi necessitatibus a neque doloremque, quo eligendi perferendis accusamus, ullam consectetur impedit quas? Ipsa quos nostrum inventore cupiditate adipisci.icing elit. Tenetur quidem mollitia excepturi necessitatibus a neque doloremque, quo eligendi perferendis accusamus, ullam consectetur impedit quas? Ipsa quos nostrum inventore cupiditate adipisci.icing elit. Tenetur quidem mollitia excepturi necessitatibus a neque doloremque, quo eligendi perferendis accusamus, ulm mollitia excepturi necessitatibus a neque doloremque, quo eligendi perferendis accusamus, ullam consectetur impedit quas? Ipsa quos nostrum inventore cupiditate adipisci.icing elit. Tenetur quidem mollitia excepturi necessitatibus a neque doloremque, quo eligendi perferendis accusamus, ullam consectetur impedit quas? Ipsa quos nostrum inventore cupiditate adipisci.icing elit. Tenetur quidem mollitia excepturi necessitatibus a neque doloremque, quo eligendi perferendis accusamus, ullam consectetur impedit quas? Ipsa quos nostrum inventore cupiditate adipisci.icing elit. Tenetur quidem mollitia excepturi necessitatibus a neque doloremque, quo eligendi perferendis accusamus, ullam consectetur impedit quas? Ipsa quos nostrum inventore cupiditate adipisci.icing elit. Tenetur quidem mollitia excepturi necessitatibus a neque doloremque, quo eligendi perferendis accusamus, ullam consectetur impedit quas? Ipsa quos nostrum inventore cupiditate adipisci.icing elit. Tenetur quidem mollitia excepturi necessitatibus a neque doloremque, quo eligendi perferendis accusamus, ullam consectetur impedit quas? Ipsa quos nostrum inventore cupiditate adipisci.icing elit. Tenetur quidem mollitia excepturi necessitatibus a neque doloremque, quo eligendi perferendis accusamus, ullam consectetur impedit quas? Ipsa quos nostrum inventore cupiditate adipisci.icing elit. Tenetur quidem mollitia excepturi necessitatibus a neque doloremque, quo eligendi perferendis accusamus, ulm mollitia excepturi necessitatibus a neque doloremque, quo eligendi perferendis accusamus, ullam consectetur impedit quas? Ipsa quos nostrum inventore cupiditate adipisci.icing elit. Tenetur quidem mollitia excepturi necessitatibus a neque doloremque, quo eligendi perferendis accusamus, ullam consectetur impedit quas? Ipsa quos nostrum inventore cupiditate adipisci.icing elit. Tenetur quidem mollitia excepturi necessitatibus a neque doloremque, quo eligendi perferendis accusamus, ullam consectetur impedit quas? Ipsa quos nostrum inventore cupiditate adipisci.icing elit. Tenetur quidem mollitia excepturi necessitatibus a neque doloremque, quo eligendi perferendis accusamus, ullam consectetur impedit quas? Ipsa quos nostrum inventore cupiditate adipisci.icing elit. Tenetur quidem mollitia excepturi necessitatibus a neque doloremque, quo eligendi perferendis accusamus, ullam consectetur impedit quas? Ipsa quos nostrum inventore cupiditate adipisci.icing elit. Tenetur quidem mollitia excepturi necessitatibus a neque doloremque, quo eligendi perferendis accusamus, ullam consectetur impedit quas? Ipsa quos nostrum inventore cupiditate adipisci.icing elit. Tenetur quidem mollitia excepturi necessitatibus a neque doloremque, quo eligendi perferendis accusamus, ullam consectetur impedit quas? Ipsa quos nostrum inventore cupiditate adipisci.icing elit. Tenetur quidem mollitia excepturi necessitatibus a neque doloremque, quo eligendi perferendis accusamus, ulpiciatis error iusto, assumenda ut deserunt repudiandae hic placeat iure incidunt mollitia ad possimus enim praesentium, accusantium laudantium, vel inventore optio. Ullam quos eum ratione velit deleniti explicabo quisquam reprehenderit itaque quaerat iusto eaque magnam inventore nam earum laborum tempore natus, a mollitia ex fuga odio. Nobis accusantium repudiandae consequatur natus. Expedita officia a exercitationem ipsum quae id ad facere dicta et vitae fuga, quibusdam repudiandae accusamus. Eaque enim necessitatibus ipsum. Id iste eos facere dignissimos nostrum atque nobis suscipit repellendus adipisci praesentium, molestiae iure minima qui culpa um eaque tempora veniam placeat, minima aspernatur iure magni distinctio modi numquam assumenda, temporibus, hic voluptatem quis consequuntur fuga inventore harum? Quis placeat temporibus sed ex fugiat neque quod, deserunt corporis recusandae atque cum aspernatur sunt assumenda dolor iste, quos veniam libero? Velit placeat ducimus, officiis voluptas laboriosam similique ea culpa, molestias cupiditate ex amet dolore incidunt eum facilis dolorum illum aliquam blanditiis nemo! Quaerat enim eius cupiditate amet id libero veniam pariatur. Delectus beatae eaque placeat iure labore error sed consectetur distinctio, minima vitae doloribus sapiente a suscipit provident ad atque esse! Eaque pariatur vel minus eligendi?</p>
+
+    <div class="main">
+
+        <div class="w1">
+            <img src="" alt="">
+            <div class="efect" id="effect1"></div>
+        </div>
+
+        <div class="w2">
+            <img src="" alt="">
+            <div class="efect" id="effect2"></div>
+        </div>
+
+    </div>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quidem mollitia excepturi necessitatibus a neque doloremque, quo eligendi perferendis accusamus, ullam consectetur impedit quas? Ipsa quos nostrum inventore cupiditate adipisci.icing elit. Tenetur quidem mollitia excepturi necessitatibus a neque doloremque, quo eligendi perferendis accusamus, ullam consectetur impedit quas? Ipsa quos nostrum inventore cupiditate adipisci.icing elit. Tenetur quidem mollitia excepturi necessitatibus a neque doloremque, quo eligendi perferendis accusamus, ullam consectetur impedit quas? Ipsa quos nostrum inventore cupiditate adipisci.icing elit. Tenetur quidem mollitia excepturi necessitatibus a neque doloremque, quo eligendi perferendis accusamus, ullam consectetur impedit quas? Ipsa quos nostrum inventore cupiditate adipisci.icing elit. Tenetur quidem mollitia excepturi necessitatibus a neque doloremque, quo eligendi perferendis accusamus, ullam consectetur impedit quas? Ipsa quos nostrum inventore cupiditate adipisci.icing elit. Tenetur quidem mollitia excepturi necessitatibus a neque doloremque, quo eligendi perferendis accusamus, ullam consectetur impedit quas? Ipsa quos nostrum inventore cupiditate adipisci.icing elit. Tenetur quidem mollitia excepturi necessitatibus a neque doloremque, quo eligendi perferendis accusamus, ullam consectetur impedit quas? Ipsa quos nostrum inventore cupiditate adipisci.icing elit. Tenetur quidem mollitia excepturi necessitatibus a neque doloremque, quo eligendi perferendis accusamus, ullam consectetur impedit quas? Ipsa quos nostrum inventore cupiditate adipisci.icing elit. Tenetur quidem mollitia excepturi necessitatibus a neque doloremque, quo eligendi perferendis accusamus, ullam consectetur impedit quas? Ipsa quos nostrum inventore cupiditate adipisci.icing elit. Tenetur quidem mollitia excepturi necessitatibus a neque doloremque, quo eligendi perferendis accusamus, ullam consectetur impedit quas? Ipsa quos nostrum inventore cupiditate adipisci.icing elit. Tenetur quidem mollitia excepturi necessitatibus a neque doloremque, quo eligendi perferendis accusamus, ullam consectetur impedit quas? Ipsa quos nostrum inventore cupiditate adipisci.icing elit. Tenetur quidem mollitia excepturi necessitatibus a neque doloremque, quo eligendi perferendis accusamus, ullam consectetur impedit quas? Ipsa quos nostrum inventore cupiditate adipisci.icing elit. Tenetur quidem mollitia excepturi necessitatibus a neque doloremque, quo eligendi perferendis accusamus, ullam consectetur impedit quas? Ipsa quos nostrum inventore cupiditate adipisci.icing elit. Tenetur quidem mollitia excepturi necessitatibus a neque doloremque, quo eligendi perferendis accusamus, ullam consectetur impedit quas? Ipsa quos nostrum inventore cupiditate adipisci.icing elit. Tenetur quidem mollitia excepturi necessitatibus a neque doloremque, quo eligendi perferendis accusamus, ullam consectetur impedit quas? Ipsa quos nostrum inventore cupiditate adipisci.icing elit. Tenetur quidem mollitia excepturi necessitatibus a neque doloremque, quo eligendi perferendis accusamus, ullam consectetur impedit quas? Ipsa quos nostrum inventore cupiditate adipisci.icing elit. Tenetur quidem mollitia excepturi necessitatibus a neque doloremque, quo eligendi perferendis accusamus, ullam consectetur impedit quas? Ipsa quos nostrum inventore cupiditate adipisci.icing elit. Tenetur quidem mollitia excepturi necessitatibus a neque doloremque, quo eligendi perferendis accusamus, ullam consectetur impedit quas? Ipsa quos nostrum inventore cupiditate adipisci.</p>
+
+
+    <script>
+
+effec_tag1= document.getElementById("effect1")
+effec_tag2 = document.getElementById("effect2")
+
+
+// effec_tag1.style.color="red"
+
+
+function jadav()
+
+{
+
+if(document.documentElement.scrollTop > 400)
+
+{
+
+effec_tag1.style.left="10%"
+effec_tag2.style.left="10%"
+effec_tag1.style.visibility="visible"
+effec_tag2.style.visibility="visible"
+
+}
+
+else
+{
+    effec_tag1.style.left="0%"
+effec_tag2.style.left="0%"
+effec_tag1.style.visibility="hidden"
+effec_tag2.style.visibility="hidden"
+}
+
+
+}
+
+console.log("effect2")
+
+    </script>
+
+</body>
+</html>

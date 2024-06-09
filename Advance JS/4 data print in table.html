@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<h1 id="x" ></h1>
+
+<body>
+
+
+
+    <script>
+
+
+        h1_tag = document.getElementById("x")
+
+        fetch("https://jsonplaceholder.typicode.com/users")  // fetch data
+
+        
+            .then((dv) => {
+                return dv.json()
+            })                                           // json file verify.
+
+
+            .then((dp) => {
+
+
+                // h1_tag.innerHTML=dp                //=>pura array milega.
+                // h1_tag.innerHTML= dp[0].name       // 0 index pe hai uska name dega.
+
+
+                // without loop hum sabhi name ek sath get nahi kar sak te.
+                // dp == array hai. to hum array pe map() method use kar sak te hai.
+
+
+
+            //       h=""
+            // dp.map((v)=>{  
+
+            //     // h1_tag.innerHTML = v.name   // kisi tag main print karenge to vo last value hi dega.
+
+            //     // tag ka data kisi variable main stor karna pdega.use variable ko tag main prit karna padega.
+
+
+            //     // h=""    // h  ki value loop se bahar honi chahiye.
+            //     h = h + v.name +"<br>"
+
+            //     h1_tag.innerHTML=h
+
+            // })
+
+
+
+                //ager hame pura API ka deta table main peint karna hai.
+                // ==> use table inside the backtick sing.
+
+//                 apdt = `<h1>API DATA</h1>
+//                 <table border="1">
+// <tr>
+//     <td>Id</td>
+//     <td>NAME</td>
+//     <td>EMAIL</td>
+
+// </tr>`
+//                 h1_tag.innerHTML = dp.map((v) => {
+
+//                     apdt = apdt + `     
+// <tr>
+// <td>${v.id}  </td>
+// <td>${v.name}  </td>
+// <td>${v.email} </td>
+// </tr>`
+//                 })
+
+//                 h1_tag.innerHTML = apdt + `</table>`
+
+            // })
+        })
+
+
+            // table tah hame loop main creat nahi karana hai. nahi to pura table repeat karega. =>only for <tr> or <td> inside the loop
+            // starting table tag loop ke bahar print karana hai. or closing tag deta prit ho uske bad.
+
+    </script>
+
+</body>
+
+</html>

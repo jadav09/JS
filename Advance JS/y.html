@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="jjj"></div>
+    <div id="div"></div>
+    <div id="jil"></div>
+    <div id="last"></div>
+
+    <script>
+
+        var jay = document.getElementById("jjj")
+
+        var jay1 = document.getElementById("div")
+        var jay2 = document.getElementById("jil")
+        var jay3 = document.getElementById("last")
+
+        class Parent 
+        {
+            n = 400;
+        }
+
+        const obj1 = new Parent
+        jay.innerHTML = (obj1.n + "</br>")
+        // document.write(jay.innerHTML)
+
+
+        class Mother extends Parent 
+        {
+
+        }
+
+        class Girl extends Mother
+        {
+
+        }
+
+        class Boy extends Parent 
+        {
+
+        }
+
+        const obj2 = new Mother
+        jay1.innerHTML = (obj2.n / 2)
+
+        jay.innerHTML = (obj1.n - 200) 
+
+        const obj3 = new Girl 
+        jay2.innerHTML = (jay1.innerHTML)
+
+        jay1.innerHTML = (jay1.innerHTML - 200)
+
+        const obj4 = new Boy 
+        jay3.innerHTML = (jay.innerHTML)
+
+        jay.innerHTML = (jay.innerHTML - 200)
+
+
+        document.write(jay.innerHTML)
+
+
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 id="res"></h1>
+
+
+    <script>
+
+        class father 
+        {
+            n2 = 400;
+        }
+
+        const obj1F = new father
+
+        document.write(obj1F.n2+" All property of father"+"<br>")  //400
+
+// ***********
+        class Mother extends father
+        {
+
+        }
+
+        const obj2M = new Mother
+        
+        obj2M.n2 =obj1F.n2-200
+
+        document.write(obj2M.n2+" mother property"+"<br>")  //200 M
+
+
+        obj1F.n2 =obj1F.n2-obj2M.n2   //400-200=200 F
+
+ document.write(obj1F.n2 +" father propety" +"<br>") //200 F
+
+
+//  ***********
+
+        class daughter extends Mother
+
+        {
+ 
+        }
+
+        obj3D =new daughter
+
+        obj3D.n2=obj2M.n2-100  //100 D
+
+        obj2M.n2=obj2M.n2-obj3D.n2  // 200-100 = 100 M 
+
+         document.write(obj3D.n2 +" doutter property" +"<br>" ) //100 D
+
+         document.write(obj2M.n2 +" mother property") //100 M
+
+
+
+    </script>
+
+</body>
+</html>

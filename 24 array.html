@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1 id="ary"></h1>
+
+    <!-- Array: Collection of values 
+
+        values==> number,string,boolean
+
+        syntax: 
+
+        var varname = [val1,val2,...,valN]
+
+        val1,val2,...,valN
+
+        varname[index] = val1
+        
+
+         let varname = [val1,val2,...,valN]
+          const varname = [val1,val2,...,valN]
+
+        var x = [1,"hi",true,1,1]
+
+        Array INDEX/KEY/POSITION always STARTS WITH ZERO(0)
+
+        length of an Array = total no of values stored
+
+        length=5
+
+        varname.method
+        x.length = 5
+
+    x = 1
+    x=3
+    y=2 -->
+
+
+
+    <script>
+
+        var x = [1, "hi", true, 1, 23]
+
+        //  document.write(x.length )
+
+        // document.write(x);
+
+        // document.write(x[0]);
+        // document.write(x[1]);
+        // document.write(x[2]);
+
+        // for(xyz=0;xyz<x.length;xyz++)
+
+        // {
+
+        //     // document.write(xyz)   // ===> 01234 milega
+        //     // document.write("==>") 
+        //     // document.write(x[xyz]) // x[0]=>1  same as x[xyz] main x ki sabhi vlaue milegi.
+        //     // document.write("<br>")
+
+        //     // document.write(xyz +"==>" +x[xyz] +"<br>") 
+
+        //     // document.write(x[xyz] + "<br>")
+
+        // }
+
+
+
+        // jadav = [10,"jadav",123,true, 0.389,false,"ld"]
+
+        // for(x=0;x<=jadav.length;x++)
+
+        // {
+
+        //     document.write(x)
+        //     document.write("==>")
+        //     document.write(jadav[x])
+        //     document.write("<br>")
+
+        // }
+
+        // console.log(jadav)
+
+
+
+
+        //  xyz= [100,200,400,jadav]   //data not print in array.becouse jadav words not use in string.
+        xyz = [100, 200, 400, "jadav"]
+
+        ary_tag = document.getElementById("ary")
+
+        ary_tag.innerHTML = xyz   // to print hole array.
+        ary_tag.innerHTML = xyz[1]  // to prints only for 1 indexes in array.
+
+
+
+        //JavaScript new Array() method
+
+        //JavaScript has a built-in array constructor new Array().
+        //But you can safely use [] instead.
+
+
+        xyz1 = new Array(20, 0, 300, "jadav", "dharmesh")
+
+        ary_tag.innerHTML = xyz1
+
+
+        //it is not same    //const points = [40];         
+        //const points = new Array(40);      
+
+        const points = [40]
+
+        ary_tag.innerHTML = points[0] // to print in 40 number
+
+        const points1 = new Array(40)
+
+        ary_tag.innerHTML = points1[0]  // to print undifined
+
+
+
+
+        //-: Basic Array Methods:-
+
+
+        abc = [34, 49, 0, "jadav", 80]
+
+        ary_tag.innerHTML = abc.length     //total number of lenth display karega.
+        ary_tag.innerHTML = abc.toString() //converts an array to a string of (comma separated) array values.
+        ary_tag.innerHTML = abc.at(2)      // 2 number vale index ki value dega. => 0  at() method returns the same as [].
+        ary_tag.innerHTML = abc[2]         // 2 number vale index ki value dega. => 0
+
+        ary_tag.innerHTML = abc.join("*")  // all value ko * se join karega. kisi bhi symbole se join kar sak te hai.
+
+
+        //Popping and Pushing mehod
+
+        //==> it is easy to remove elements and add new elements.
+        //==> Popping items out of an array, or pushing items into an array.
+
+        ary_tag.innerHTML = abc.pop()        //he pop() method removes the last element from an array:
+        ary_tag.innerHTML = abc              // check into display remove that last elements.
+
+
+        ary_tag.innerHTML = abc.push("dharmes")  // The push() method returns the new array length:
+        // ary_tag.innerHTML =abc                  // check into display add into last elements.         
+
+
+        ary_tag.innerHTML = abc.shift()                //shift() method removes the first element of an array (and "shifts" the other elements to the left):
+        ary_tag.innerHTML = abc                       // check into display remove first elements into array.   
+
+        ary_tag.innerHTML = abc.unshift("xyz")      // The unshift() method returns the new array length:
+        ary_tag.innerHTML = abc                   // check into display add first elements into array.   
+
+
+
+        delete abc[0];                            // delete the 0 number indexes in array.
+        ary_tag.innerHTML = abc                       // check it delete this elements
+        ary_tag.innerHTML = abc[0]    // undifined results in display. not autometicaly set the value.
+
+
+
+
+        //==>The concat() method creates a new array by merging (concatenating) existing arrays:
+        //==>The concat() method does not change the existing arrays. It always returns a new array.
+
+
+        a = ["apple", "bol,", "cat", "dog"]
+        b = ["elephate", "fish", "goat"]
+
+        ary_tag.innerHTML = a.concat(b)           // var a ke ander b kobhi add karega.
+
+        c = ["hen", "icecream", "jug", "kite", "lion", "men", "nose"]
+
+        ary_tag.innerHTML = c.concat("xyz")         // var c ke ander xyz add karega.
+
+        ary_tag.innerHTML = a.concat(b, c)
+
+
+
+
+
+        // The splice() method can be used to add new items to an array:
+
+        // const fruits = ["Banana", "Orange", "Apple", "Mango","kaju"];
+
+        // fruits.splice(2,0,"jambu","lemone")        //The first parameter (2) defines the position where new elements should be added (spliced in)
+        // ary_tag.innerHTML = fruits
+        //The second parameter (0) defines how many elements should be removed. 
+        // index number 2 pe jambu or lemone add kro.or 0 mins=> remove karo.
+
+
+        // fruits.splice(2,2,"jambu","lemone")        // index number 2 pe add kro or 2 index remove kro. apple or mango also remove
+        // ary_tag.innerHTML = fruits
+
+
+
+        // f=fruits.slice(3)                  //slice(3) first 3 ko remove karega display only for mango,kaju rahega.
+        // ary_tag.innerHTML = f
+
+
+
+        Name = ["ravi", "dharmesh", "bhuri", "vivek", "nilo", "mayuri", "dharmesh"]
+        // name1 = name.indexOf("nilo")
+
+        ary_tag.innerHTML = Name.indexOf("dharmesh")   //Array.indexOf() returns -1 if the item is not found.
+        //If the item is present more than once, it returns the position of the first occurrenc\
+        // dharmesh ek se jayada hi to vo first milega use pick karega.
+
+        ary_tag.innerHTML = Name.lastIndexOf("dharmesh")  // reverce count karga. ==>6
+
+
+        ary_tag.innerHTML = Name.includes("vivek")  // vivek milega to vo true dega.
+        ary_tag.innerHTML = Name.includes("xyz")  // xyz not find in Name than result is false.
+
+
+
+
+        nmbr = [1, 23, 334, 4, 65, 76, 87, 60]
+
+        ary_tag.innerHTML = nmbr.find(name)             // The find() method returns the value of the first array element that passes a test function.
+        ary_tag.innerHTML = nmbr.findIndex(name)
+        // 50 ke uper ki first value hi dega.   ==>find() method
+        // 50 ki uper ka fist index value dega. ==>findIndex() method
+
+        function name(value, index)       //index pe index or value pe value milegi. it's para consept.
+        {
+            return value > 50
+            return index > 50
+        }
+
+        // Note that the function takes 3 arguments:
+
+        // The item value
+        // The item index
+        // The array itself
+
+
+        ary_tag.innerHTML = nmbr.findLast(xyz => xyz > 50)  //50 ke uper last value dega. ==> findLast() method
+        ary_tag.innerHTML = nmbr.findLastIndex(xyz => xyz > 50)  //50 ke uper ki last index value dega. ==> findLastIndex() method
+
+
+
+        fruits1 = ["graps", "banana", "mengos", "apples", "kiwi"]
+
+        nmbr1 = [10, 8, 6, 2, 9, 7, 3, 4, 5, 1]
+
+        // ary_tag.innerHTML = fruits1.sort()    // he sort() method sorts an array alphabetically:
+        // ary_tag.innerHTML = fruits1.reverse()    //The reverse() method reverses the elements in an array:
+
+
+        //The compare function should return a negative, zero, or positive value, depending on the arguments:
+
+        //syntax :-
+        //function(a, b){return a - b}
+
+
+
+        // ary_tag.innerHTML= nmbr1.sort(function (a,b){return (a-b)})   //apply the condiion and print to 1-10 orders number
+        // ary_tag.innerHTML= nmbr1.sort(function (a,b){return (b-a)})   //apply the condiion and print 10-1 orders numbers
+
+
+        //you can use the index to obtain the highest and lowest values.
+
+        // nmbr1.sort(function (a,b) {return (a-b)})   // that is lowest order in numbrically
+        // nmbr1.sort(function (a,b) {return (b-a)})   // that is higest order in numbrically
+
+
+        // ary_tag.innerHTML =nmbr1[0]  // 0 index pe lowest value milegi
+        // ary_tag.innerHTML =nmbr1[0]  // 0 index pe hight value milegi
+
+
+
+
+
+        // Ussing math.min() & math.max() vlaue in arry.
+
+        // Math.min()
+
+        nmbr2 = [299, 89, 400, 2, 3, 2949, 78]
+
+        ary_tag.innerHTML = dj(nmbr2)
+
+        function dj(xyz) {
+            return Math.min.apply(null, xyz)
+        }
+
+        // Math.max()
+
+        ary_tag.innerHTML = dj1(nmbr2)
+
+        function dj1(xyz1) {
+            return Math.max.apply(null, xyz1)
+        }
+
+
+
+
+        // use this condition and get min & max value into array.
+        v
+
+
+    </script>
+
+
+</body>
+
+</html>

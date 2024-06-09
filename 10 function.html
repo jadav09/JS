@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- 
+        
+        Function: it is block of code which we can use as many times as we need when we call it
+    code reuse 
+
+    Types:
+
+    1. simple 
+    2. function with parameter/arguments
+
+    Syntax :
+
+    function functionName()
+    {
+        ...code/statement
+    }
+    
+    functionName();//calling a function
+
+
+==> function with parameter 
+
+    function functionName(para1,para2,...,paraN)
+    {
+        ...code/statement
+    }
+    functionName(val1,val2,...,valN);//calling a function
+
+-->
+
+    <script>
+
+            x=1;
+
+            function jadav()
+            {
+                document.write(x)
+            }
+
+            jadav();
+            jadav();
+            jadav();
+            jadav();
+            jadav();
+    
+            // ager hamne function name ko niche call nahi karvaya to vo document.write main x=1 print nahi karega.(it's complasory)
+
+            // you can many times call the value
+
+
+            function Test(y,xyz)
+
+            {
+
+                document.write(xyz+"<br>")
+                // document.write(y+ " " + xyz+"<br>")
+            }
+
+            // funcion ke under jitne parameter hai. utni value honi chahiye.(ti's compalsory)
+            // two parameter hai to two value hogi.nahi to undifined hoga.
+
+            Test(12)  // ==>undifind (reason one value)
+            Test(1,5)
+            Test(1.2,"dfg")
+            Test(12,-45)
+
+            
+            
+
+            
+
+       
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1 id="obj"></h1>
+
+    <!-- Object: you can customize an index in an object
+
+        apne hisab se index leke vlaue set kar sak te hai.
+
+    var a = [1,"hi",true]
+
+    0=>1
+    1=>hi 
+    2=>true
+
+    30:1
+    xyz:"hi"
+    kaipan :true
+
+    var a = 
+    {
+        index:value,
+        index:value
+    }
+
+    var a = {
+        30:1,
+        "xyz":"hi",
+        kaipan :true
+    }
+     -->
+
+    <script>
+
+        var test123 = {
+            i1: 1,
+            "kaipan": 2,
+            gameTe: 3,
+            bameTe: 30,
+            56: 89.87,
+            12: "JayDeep Was COnfused...!"
+        }
+
+        console.log(test123)           //print hole of index
+
+        console.log(test123["kaipan"])  //console main test123 obj ki kaipan value milegi.   
+
+        console.log(test123["bameTe"]) // squer breacket main without string value show nahi karegi.
+
+        console.log(test123.bameTe)  // direct dot karke bhi value print kar sak te hai.
+
+
+
+
+        // The syntax for accessing the property of an object is:
+
+        // ==> objectName.property 
+        // ==> objectName["property"] 
+        // ==> objectName[expression]
+
+        //  create an Object
+
+        person = {
+            firstname: "John",
+            lastname: "Doe",
+            18: 50,
+            eyecolor: "blue"
+        };
+
+
+        h1_tag = document.getElementById("obj")
+
+
+        // h1_tag.innerHTML =person.firstname +" " +person["lastname"] +" is " + person[18] +"y old" 
+
+        // person.gfname="mery"  // add to property in object
+
+        // h1_tag.innerHTML =person.gfname
+
+
+
+        // :- JavaScript for...in Loop
+
+        // =>The JavaScript for...in statement loops through the properties of an object.
+
+        // Syntax :-
+
+        // for (let variable in object){
+        //   // code to be executed
+        // }
+
+        // The block of code inside of the for...in loop will be executed once for each property.
+
+        //  xyz =""
+
+        //  for(y in person)
+        //  {
+        //     xyz += person[y] +"<br>"
+
+        //  }
+
+        // h1_tag.innerHTML =xyz
+
+
+
+
+        // Deleting Properties
+
+        // The delete keyword deletes a property from an object:
+
+        // delete person.firstname
+
+        // h1_tag.innerHTML =person.firstname +" " +person["lastname"] +" is " + person[18] +"y old" 
+
+
+
+
+        // :- Nested Objects
+
+        // Values in an object can be another object:
+
+        // myObj = {
+        //   name:"John",
+        //   age:30,
+        //   cars: {
+        //     car1:"Ford",
+        //     car2:"BMW",
+        //     car3:"Fiat"
+        //   }
+        // }
+
+
+
+        // Diffrent ways to print BMW
+
+        // h1_tag.innerHTML = myObj.cars.car2
+        // h1_tag.innerHTML = myObj["cars"].car2
+        // h1_tag.innerHTML = myObj["cars"]["car2"]
+
+        // cars value stor in variable to print it.
+
+        // p1 ="cars"
+        // p2 = "car2"
+
+        // h1_tag.innerHTML = myObj[p1][p2]
+
+
+
+
+
+        //  Nested Arrays and Objects
+        // Values in objects can be arrays, and values in arrays can be objects:
+
+        const myObj1 = {
+            name: "John",
+            age: 30,
+            cars: [
+                { name: "Ford", models: ["Fiesta", "Focus", "Mustang"] },
+                { name: "BMW", models: ["320", "X3", "X5"] },
+                { name: "Fiat", models: ["500", "Panda", "x90x"] }
+            ]
+        }
+
+        // h1_tag.innerHTML=myObj1.cars[1].models[2]
+
+
+        // h1_tag.innerHTML = myObj1.cars[1].models[1] // find perfect value in an objects.
+
+
+        // use a for loop for each array:-
+
+        // for(op=0;op<=myObj1.cars.length; op++)
+        // {
+
+        // document.write("<h1>" + myObj1.cars[op].name +"</h1>")
+
+        // for(x=0;x<myObj1.cars.length; x++) 
+        // {
+        // document.write(myObj1.cars[op].models[x]+"<br>")
+        // }
+        // }
+
+        // console.log(myObj1)
+
+
+
+
+
+        //:- You access an object method with the following syntax:
+
+        // objectName.methodName()
+
+
+
+        person2 = {                  // Object ke under function bhi creat kar sak te hai.
+            firstName: "John",
+            lastName: "Doe",
+            id: 5566,
+            fullName: function () { return this.firstName + " " + this.lastName; }
+        };
+
+        // person2.age = function() { return this.id + " " + this.fullName();}  // add to property on person2 object.
+
+
+        // h1_tag.innerHTML = person2.fullName()
+        // h1_tag.innerHTML = person2.fullName          // without parenthesis return function defination.
+        // h1_tag.innerHTML = person2.age().toUpperCase()  // to use any built-in method 
+
+
+
+
+        //display JavaScript objects are:
+
+        person3 = {
+            name: "John",
+            age: 30,
+            city: "New York"
+        };
+
+
+        // ==> the Object Properties by name
+
+        // h1_tag.innerHTML = person3.name +" age is "+person3.age 
+
+
+        // ==> the Object Properties in a Loop
+
+        // abc =""
+        // for( j in person3)
+        // {
+        //   abc += person3[j] +" "
+        // }
+
+        // h1_tag.innerHTML = abc
+
+
+        // // ==> the Object using Object.values() 
+
+        // h1_tag.innerHTML = Object.values(person3)    // Any JavaScript object can be converted to an array using Object.values()
+
+        // console.log(Object.values(person3))  
+
+
+        // person3.id =12876                                 //add to property in object.
+        // person3.GfName = function (){return "merry"}     // add to property throw function.
+
+
+        // // ==> the Object using JSON.stringify()
+
+        // h1_tag.innerHTML =JSON.stringify(person3)     //(converted to a string) 
+
+        // JSON.stringify will not stringify functions: 
+        // JSON.stringify function ko count nahi karega. person3 main GfName ko string main convert nahi karega.
+
+
+
+        myFather = {
+            firstName: "rajesh",
+            age: 20,
+            farmer: true
+
+        }
+
+        // JavaScript has built-in constructors for native objects:
+
+        //=> Normally, strings are created as primitives: firstName = "rejesh"
+        //=> Normally, numbers are created as primitives: x = 20
+        //=> Normally, booleans are created as primitives: x = false
+
+        // h1_tag.innerHTML = typeof(myFather.firstName)  // string
+        // h1_tag.innerHTML = typeof(myFather.age)        // numbers
+        // h1_tag.innerHTML = typeof(myFather.farmer)     // boolean
+
+
+        // // but,can also be created as objects using the "new" keywords
+
+        // h1_tag.innerHTML = typeof(new String("john"))  //object
+        // h1_tag.innerHTML = typeof(new Number("89"))  //object
+        // h1_tag.innerHTML = typeof(new Boolean("89"))  //object
+
+
+
+        // JavaScript Set:-
+
+        //==>A JavaScript Set is a collection of unique values.
+        //==>A Set can hold any value of any data type.
+
+
+
+        // new Set()	Creates a new Set
+        // add()	Adds a new element to the Set
+        // delete()	Removes an element from a Set
+        // clear()	Removes all elements from a Set
+
+
+        // Create a Set
+
+        const letters = new Set(["a", "b", "c"]);
+
+        letters.add("e")
+        letters.add("e")     // not added or delete in same values.
+        letters.add("f")
+        letters.add("g")
+
+        // Display set.size
+
+        h1_tag.innerHTML = letters.size;
+
+
+        letters.delete("a")
+        letters.delete("c")
+        letters.delete("c")
+
+        h1_tag.innerHTML = letters.size
+
+    </script>
+</body>
+
+</html>

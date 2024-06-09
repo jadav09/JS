@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .main
+        {
+            margin: 100px auto;
+            /* background-color: powderblue; */
+            text-align: center;
+
+        }
+        .main i{
+            font-size: 50px;
+            padding: 0px 30px;
+        }
+
+        .img1 img
+    
+        {
+            border-radius: 50%;
+        }
+
+        #ifon
+        {
+            display: none;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <div class="main">
+
+        <h1>music player</h1>
+        <div class="img1"><img src="music playre.jpg" alt=""></div>
+
+        <div class="next">
+
+            <i class="fa-solid fa-backward"></i>
+
+            <i class="fa-solid fa-play" id="pus"></i>
+
+            <i onclick="next()" class="fa-solid fa-forward">
+
+                <!-- <div class="msc"> -->
+
+                    <iframe id="ifon" src="krishna_flute.mp3" ></iframe>
+
+                <!-- </div> -->
+
+
+            </i>
+            
+
+        </div>
+        
+    </div>
+    <script>
+
+        if_tag = document.getElementById("ifon")
+        
+
+        function next()
+        {
+            if(if_tag.src.match("krishna_flute.mp3")) 
+
+            {
+
+            if_tag.src="ram_siya_ram.mp3"
+            if_tag.style.display="none"
+
+            }
+
+            else if(if_tag.src.match("ram_siya_ram.mp3"))
+            {
+
+            if_tag.src="shiva_shiva_ringtone.mp3"
+            if_tag.style.display="none"
+
+            }
+
+            
+            else if(if_tag.src.match("shiva_shiva_ringtone.mp3"))
+
+            {
+
+            if_tag.src="krishna_flute.mp3"
+            if_tag.style.display="none"
+
+            }
+
+            // else if(if_tag.src.match("02 - Dishkiyaoon - Tu Hi Hai Aashiqui (Solo) [DJMaza.Info].mp3"))
+
+            // {
+
+            // if_tag.src="02 - HSKD - Samjhawan [DJMaza.Info].mp3"
+            // if_tag.style.display="none"
+
+            // }
+
+            
+            // else if(if_tag.src.match("02 - HSKD - Samjhawan [DJMaza.Info].mp3"))
+
+            // {
+
+            // if_tag.src="06 - ABCD - Duhaai [MP3Khan].mp3"
+            // if_tag.style.display="none"
+
+            // }
+            
+            // else
+            // {
+            //     if_tag.src="Aashiq Banaya Aapne - Hate Story 4 Mp3 Song-(MirchiFun.com).mp3"
+            // if_tag.style.display="none"
+                
+            // }
+
+            
+
+            
+
+            
+        }
+
+
+
+    </script>
+    
+</body>
+</html>

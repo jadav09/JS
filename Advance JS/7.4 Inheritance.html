@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <!-- 4. Inheritance : to access properties(var,function) of one class to another class we need Inheritance
+
+    to access properties of parent class into child class
+
+    using extends keyword
+
+    Syntax:
+
+    class childClassName extends parentClassNAme
+
+    class child extends Parent
+
+    You must create obj of CHILD CLASS onnly.. -->
+
+    <script>
+
+class parent
+{
+    fun1()
+    {
+        var x=200
+        document.write(x)
+    }
+}
+
+
+class child extends parent
+
+
+{
+
+    myPro()
+    {
+
+        document.write("child property!!!")
+        
+    }
+}
+
+const obj = new parent
+obj.fun1()               // perants property.
+
+const obj1 = new child
+obj1.fun1()            // extends child propery.
+
+
+obj1.myPro()           // khudki pro bhi access kar sak ta hai.
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <h1 id="h1">Heading</h1>
+    <h3 id="d1">jadav-dharmesh</h3>
+    <h4 id="j1">jaydeep jadav</h4>
+
+
+    <p id="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore laborum sint ratione libero eligendi nulla iusto nisi quam laboriosam ipsum? Excepturi aspernatur non vel consequuntur eaque quisquam sunt eum neque?</p>
+
+    <a href="x.html" id="anc" target="_blank">LINK</a>
+
+    
+    <input type="text" value="TestInp123" id="inp" >
+    
+
+    <img src="../images/jadav.gisf.jpg" alt="No Image" id="i1" height="100px" width="100px">
+
+    
+    <script>
+
+
+        h1_tag = document.getElementById("h1")
+        h3_tag = document.getElementById("d1")
+        h4_tag = document.getElementById("j1")
+        p_tag  = document.getElementById("para")
+        a_tag  = document.getElementById("anc")
+        i_tag  = document.getElementById("inp")
+        img_tag= document.getElementById("i1")
+
+        
+        // Q1. jadav dharmesh ki jagah jaydeep jadav likha hona chaiya?
+
+        h3_tag.innerHTML=h4_tag.innerHTML  //(jadav dharmesh==jaydeep jadav)
+
+        // Q2. paragraph ka deta href=x.html main hona chahiya. ?
+
+        a_tag.href=p_tag.innerHTML
+
+        // Q3. paragraph ka deta input  main hona chahiya. ?
+
+        i_tag.value=p_tag.innerHTML
+
+        // Q4. (heading) ki jagah (no-img) likha hona chahiya. ?
+
+        h1_tag.innerHTML=img_tag.alt
+
+        // Q5. link ki jagah jadav dharmesh likha hona chahiya. ?
+
+        a_tag.innerHTML= h3_tag.innerHTML
+
+
+
+
+    </script>
+    
+
+</body>
+</html>

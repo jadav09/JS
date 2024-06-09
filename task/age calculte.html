@@ -1,0 +1,214 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>date of birth:-</h1>
+
+    <select name="" id="sel1_month">
+
+    <option value="">jan</option>
+    <option value="">feb</option>
+    <option value="">mar</option>
+    <option value="">apl</option>
+    <option value="">may</option>
+    <option value="">jun</option>
+    <option value="">july</option>
+    <option value="">sep</option>
+    <option value="">oct</option>
+    <option value="">nev</option>
+    <option value="">dec</option>
+   </select>
+
+   <select name="" id="sel1_val">
+
+    <option value="">1</option>
+    <option value="">2</option>
+    <option value="">3</option>
+    <option value="">4</option>
+    <option value="">5</option>
+    <option value="">6</option>
+    <option value="">7</option>
+    <option value="">8</option>
+    <option value="">9</option>
+    <option value="">10</option>
+    <option value="">11</option>
+    <option value="">12</option>
+    <option value="">13</option>
+    <option value="">14</option>
+    <option value="">15</option>
+    <option value="">16</option>
+    <option value="">17</option>
+    <option value="">18</option>
+    <option value="">19</option>
+    <option value="">20</option>
+    <option value="">21</option>
+    <option value="">22</option>
+    <option value="">23</option>
+    <option value="">24</option>
+    <option value="">25</option>
+    <option value="">26</option>
+    <option value="">27</option>
+    <option value="">28</option>
+    <option value="">29</option>
+    <option value="">30</option>
+    <option value="">31</option>
+   </select>
+
+<input type="number" id="year1">
+
+
+<h1>choose date</h1>
+    <select name="" id="sel2_month">
+    <option value="">jan</option>
+    <option value="">feb</option>
+    <option value="">mar</option>
+    <option value="">apl</option>
+    <option value="">may</option>
+    <option value="">jun</option>
+    <option value="">july</option>
+    <option value="">sep</option>
+    <option value="">oct</option>
+    <option value="">nev</option>
+    <option value="">dec</option>
+   </select>
+
+   <select name="" id="sel2_val">
+
+    <option value="">1</option>
+    <option value="">2</option>
+    <option value="">3</option>
+    <option value="">4</option>
+    <option value="">5</option>
+    <option value="">6</option>
+    <option value="">7</option>
+    <option value="">8</option>
+    <option value="">9</option>
+    <option value="">10</option>
+    <option value="">11</option>
+    <option value="">12</option>
+    <option value="">13</option>
+    <option value="">14</option>
+    <option value="">15</option>
+    <option value="">16</option>
+    <option value="">17</option>
+    <option value="">18</option>
+    <option value="">19</option>
+    <option value="">20</option>
+    <option value="">21</option>
+    <option value="">22</option>
+    <option value="">23</option>
+    <option value="">24</option>
+    <option value="">25</option>
+    <option value="">26</option>
+    <option value="">27</option>
+    <option value="">28</option>
+    <option value="">29</option>
+    <option value="">30</option>
+    <option value="">31</option>
+   </select>
+
+<input type="number" id="year2">
+
+<br><br>
+
+<button onclick="yr()">Calculate</button>
+
+<br><br>
+
+Years:-<span id="oy"></span> Month:- <span id="month"></span> day:- <span id="day"></span>
+
+  
+
+<script>
+
+jadav =new Date()
+sec = jadav/1000
+min = sec/60
+hour =min/60
+day=hour/24
+year=day/365
+
+
+  spy_tag = document.getElementById("oy")
+  year1_tag = document.getElementById("year1")
+  year2_tag = document.getElementById("year2")
+
+  // year1_tag.value=sec
+  // year1_tag.value=year
+
+
+  console.log(spy_tag.innnerHTML)
+
+
+
+  
+
+
+  function yr()
+  {
+  spy_tag.innerHTML=jadav  
+  }
+</script>
+</body>
+</html>
+
+
+<!-- 
+
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Age Calculator</title>
+</head>
+<body>
+
+  <h1>Age Calculator</h1>
+
+  <label>Enter your birthdate:</label>
+  <input type="date" id="birthdate">
+  <button onclick="calculat()">Calculate Age</button>
+
+  <p id="result"></p>
+
+  <script>
+
+    function calculat() {
+      // Get the birthdate from the input field
+      var birthdate = document.getElementById("birthdate").value;
+
+      // Convert the birthdate string to a Date object
+      var birthDateObject = new Date(birthdate);
+
+      // Get the current date
+      var currentDate = new Date();
+
+      // Calculate the age
+      var age = currentDate.getFullYear() - birthDateObject.getFullYear();
+
+      // Check if the birthday has occurred this year
+      if (
+        currentDate.getMonth() < birthDateObject.getMonth() ||
+        (currentDate.getMonth() === birthDateObject.getMonth() &&
+          currentDate.getDate() < birthDateObject.getDate())
+      )
+       
+     {
+        // age--;
+      }
+
+      // Display the result
+      document.getElementById("result").innerHTML =
+        "Your age is: " + age + " years";
+    } -->
+  </script>
+
+</body>
+</html>
+

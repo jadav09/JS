@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1 id="num"></h1>
+    <script>
+
+        // toString metod******
+
+        x = "50"
+
+        // All number methods can be used on any type of numbers (literals, variables, or expressions):
+
+        h1_tag = document.getElementById("num")
+
+        h1_tag.innerHTML = x.toString()
+
+
+        // toExponenential method***********
+
+        // A parameter defines the number of characters behind the decimal point:
+
+        y = 6.799
+
+        h1_tag.innerHTML = y.toExponential()  // ==>                                 6.799e+0
+        h1_tag.innerHTML = y.toExponential(1)  //pint ke bad one value milegi.    ==>6.8e+0
+        h1_tag.innerHTML = y.toExponential(2)  // point ke bad two value dega. ==>6.80e+0
+        h1_tag.innerHTML = y.toExponential(5)  // point ke bad five value dega.==>6.79900e+0
+
+
+
+        // toFixed method*************
+
+        // The toFixed() method rounds a number to a given number of digits.
+        // For working with money, toFixed(2) is perfect.
+
+        h1_tag.innerHTML = y.toFixed()  // ==> 7
+        h1_tag.innerHTML = y.toFixed(1)  // ==> 6.8
+        h1_tag.innerHTML = y.toFixed(2)  // ==>6.80
+        h1_tag.innerHTML = y.toFixed(5) //==>6.79900
+
+
+
+        // toPrecision method*********
+
+        // a number written with a specified length:z
+
+
+
+        h1_tag.innerHTML = y.toPrecision()  // ==> 6.799
+        h1_tag.innerHTML = y.toPrecision(1)  // ==> 7  (total number of langth 1 hoga.)
+        h1_tag.innerHTML = y.toPrecision(2)  // ==>6.8 (total number of langth 2 hoga.)
+        h1_tag.innerHTML = y.toPrecision(5)  // ==>6.7990  (total number of five digit)
+
+
+
+
+        //==> Converting Variables to Number:-
+
+        // There are 3 JavaScript methods that can be used to convert a variable to a number:-
+        // 1.Number()	Returns a number converted from its argument.
+        // 2.parseFloat()	Parses its argument and returns a floating point number
+        // 3.parseInt()	Parses its argument and returns a whole number
+
+
+        // 1.Number() method :-
+
+        // The Number() method can be used to convert JavaScript variables to numbers:
+
+
+        h1_tag.innerHTML = Number(true)   // 1
+        h1_tag.innerHTML = Number(false)   // 0
+        h1_tag.innerHTML = Number("10")   // 10 (convert string to number)
+        h1_tag.innerHTML = Number("   10")   // 10
+        h1_tag.innerHTML = Number("10   ")   // 10
+        h1_tag.innerHTML = Number("10 10")   // NaN (not allow between two number in space)
+        h1_tag.innerHTML = Number(10.33)   // 10.33
+        h1_tag.innerHTML = Number("JADAV")   //  NaN (Not an Number)
+
+        //  If the number cannot be converted, NaN (Not a Number) is returned.
+
+
+
+
+
+        // -:The Number() Method Used on Dates:-
+
+        // Number() can also convert a date to a number.
+        // The Date() method returns the number of milliseconds since 1.1.1970. (1.1.1970) pelani date hogo to mines mian value ayegi.
+        // The number of milliseconds between 1970-01-02 and 1970-01-01 is 86400000:
+
+        nD = new Date("1998.02.22")    // use only the date formate.
+
+        h1_tag.innerHTML = Number(nD)    // covert number is millisecound
+
+
+
+        // 2.parseFloat() method******
+
+        // parseFloat() parses a string and returns a number. Spaces are allowed. Only the first number is returned
+
+
+
+        h1_tag.innerHTML = Number(true)
+
+        h1_tag.innerHTML = parseFloat("10")   // 10 (convert string to number)
+        h1_tag.innerHTML = parseFloat("   10")   // 10
+        h1_tag.innerHTML = parseFloat("10   ")   // 10
+        h1_tag.innerHTML = parseFloat("10 10")   // 10 (only the fisrt number is returned)
+        h1_tag.innerHTML = parseFloat("10 years")// 10 (only the fisrt number is returned)
+        h1_tag.innerHTML = Number("years 10")   //  NaN (Not an Number.first number is NaN)
+
+
+
+        // 3. parseInt() method*********
+
+        // Number.parseInt() converts strings to whole numbers:
+
+        h1_tag.innerHTML = parseInt("   100.33")   // 100  (not allowed point value)
+        h1_tag.innerHTML = parseInt("100   ")   // 10
+        h1_tag.innerHTML = parseInt("101 101")   // 10 (only the fisrt number is returned)
+        h1_tag.innerHTML = parseFloat("10 years")// 10 (only the fisrt number is returned)
+        h1_tag.innerHTML = Number("years 10")    //NaN (first not an numbner)
+
+
+
+        // const radius = [10,20,30,40,50];
+
+
+        // for(x=0;x<radius.length;x++)
+        // {
+        //     jadav = Math.PI*radius[x]*radius[x]
+
+        //     console.log(jadav)
+        // }
+
+
+
+        const findArea = function (r1)
+        
+        {
+
+            return r1*r1*Math.PI
+
+        }
+
+
+    const Area = function (r,a) {
+    
+       for(i=0;i<r.length;i++)
+
+      {
+        // console.log(r[i])
+        console.log(a(r[i]))
+       }
+       
+    }
+    Area(radius,findArea)
+
+
+        // Area = Math.PI * radius[1] *radius[1];
+
+      //  const area =  radius.map((v,i)=>{
+
+      //       return(v*v*Math.PI)
+
+      //   })
+
+      //   console.log(area)
+
+
+
+        const op = [];
+        
+
+        for(i=0;i<radius.length;i++)
+        {
+            op.push( Math.PI * radius[i] *radius[i]);
+        }
+
+        console.log(op)
+
+
+
+
+
+
+     
+    //   radious =[10,20,30,40,50,60]
+
+      
+    //   for(x=0;x<radious.length;x++)
+
+    //   {
+    //  const jadav = Math.PI*radious[x]*radious[x]
+
+    //    console.log(jadav)
+
+    //   }
+    //   console.log(jadav)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .main {
+            margin: 200px 200px 10px 300px;
+            width: 880px;
+            background-color: black;
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            gap: 20px;
+            overflow: hidden;
+
+        }
+
+        .d {
+            height: 200px;
+            width: 200px;
+            background-color: green;
+            border: 2px solid powderblue;
+            transition: 5s;
+        }
+
+        .d1,
+        .d3,
+        .d5,
+        .d7,
+        .d9 {
+            background-color: red;
+            transition: 1s;
+        }
+        .d2
+        {
+            background-color: powderblue;
+            transition: 1s;
+        }
+
+        
+
+
+        .btn {
+            display: flex;
+            justify-content: space-evenly;
+
+        }
+
+        button {
+            font-size: 40px;
+            padding: 5px 20px;
+        }
+
+        /* .d1:hover
+        {
+            transform: translateX(-200px);
+            display: none;
+            /* transition: 1s; */
+        /* } */
+    </style>
+</head>
+
+<body>
+
+
+
+    <div class="main">
+
+        <div class="d d1" id="a">d1</div>
+        <div class="d d2" id="b">d2</div>
+        <div class="d d3" id="c">d3</div>
+        <div class="d d4" id="d">d4</div>
+        <div class="d d5" id="e">d5</div>
+        <div class="d d6" id="f">d6</div>
+        <div class="d d7" id="g">d7</div>
+        <div class="d d8" id="h">d8</div>
+        <div class="d d9" id="i">d9</div>
+        <div class="d d10" id="g">d10</div>
+
+
+    </div>
+
+    <div class="btn">
+
+        <button onclick="a()">&lt;</button>
+        <button>&gt;</button>
+
+    </div>
+
+
+    <script>
+
+        xyz = document.getElementsByClassName("d")
+        
+        // d1_tag = document.querySelector(".d1")
+        // d2_tag = document.querySelector(".d2")
+        // d3_tag = document.querySelector(".d3")
+        // d4_tag = document.querySelector(".d4")
+        // d5_tag = document.querySelector(".d5")
+        // d6_tag = document.querySelector(".d6")
+        // d7_tag = document.querySelector(".d7")
+        // d8_tag = document.querySelector(".d8")
+        // d9_tag = document.querySelector(".d9")
+        // d10_tag = document.querySelector(".d10")
+
+
+        xyz[0].style.translate = "0px"
+
+        // xyz.style.backgroundColor="red"
+
+        function a() {
+
+            // for (i = 0; i < xyz.length; i++) {
+            //     if (d1_tag.style.translate == "0px") {
+            //         d1_tag.style.translate = "-200px"
+            //         d1_tag.style.display = "none"
+
+            //     }
+
+            //     else if (d1_tag.style.translate == "0px") {
+            //         d2_tag.style.translate = "-200px"
+            //         d2_tag.style.display = "none"
+            //     }
+
+            // }
+
+
+            // for(i=0; i<xyz.length; i++)
+            // {
+
+            if (xyz[0].style.translate =="0px")
+            
+            {
+                xyz[0].style.translate = "-200px"
+                xyz[0].style.display = "none"
+            }
+
+            else if (xyz[0].style.translate =="-200px")
+
+            {
+                xyz[1].style.translate = "-200px"
+                xyz[1].style.display = "none"
+            }
+
+            else if(xyz[1].style.translate=="-200px")
+            {
+                xyz[2].style.translate="-200px"
+                xyz[2].style.display="none"
+
+            }
+
+
+            // else if(xyz[2].style.translate=="-200px")
+            // {
+            //     xyz[3].style.translate="-200px"
+            //     xyz[3].style.display="none"
+
+            // }
+
+
+            // }
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // else if(d3_tag.style.translate=="-200px")
+        // {
+        // d4_tag.style.translate="-200px"
+        // d4_tag.style.display="none"
+        // }
+
+        // else if(d4_tag.style.translate=="-200px")
+        // {
+        // d5_tag.style.translate="-200px"
+        // d5_tag.style.display="none"
+        // }
+
+        // else if(d5_tag.style.translate=="-200px")
+        // {
+        // d6_tag.style.translate="-200px"
+        // d6_tag.style.display="none"
+        // }
+
+
+
+
+        console.log(d3_tag)
+
+
+
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>

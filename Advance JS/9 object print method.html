@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+
+    // all student data access in three diffrents way to
+    // ==>use apply , bind or call methos
+
+
+    
+
+
+        student=
+        {
+            display: function()
+            {
+
+                return this.name +" "+ this.age +" " + this.course +"<br>"
+            }
+        }
+
+
+        // ek object banayenge or sabhi object ko function throw call karvayege.
+    
+
+        // ==> display fun se sabhi object se call karenge.
+
+        student1={
+            name:"jadav",
+            age:32,
+            course:"frount-end"
+        }
+
+        student2={
+            name:"dharmesh",
+            age:24,
+            course:"wd"
+        }
+
+        student3={
+            name:"ravi",
+            age:21,
+            course:"software"
+        }
+
+
+        console.log(student1.name)
+
+        // document.write(student.display.apply(student1))   // call the object 1
+        // document.write(student.display.apply(student2))  // call the object 2
+        // document.write(student.display.apply(student3)) // call the object 3 
+        // document.write("<br>")
+
+
+
+        // bind*******method
+
+        // bind method ko print karne ke liye hame usko variable main store  karna padega.
+        // object is not print without store in variables.
+
+
+        var x = student.display.bind(student1)
+        var y = student.display.bind(student2)
+        var z = student.display.bind(student3)
+
+
+        document.write(x())                // print the variable with using paranthesis.
+        document.write(y())
+        document.write(z())
+        document.write("<br>")
+
+        
+
+    // call******methos
+
+
+    // document.write(student.display.call(student1))
+    // document.write(student.display.call(student2))
+    // document.write(student.display.call(student3))
+
+
+
+
+
+
+
+        
+
+        
+
+
+
+        
+
+
+
+    
+
+
+    </script>
+</body>
+</html>

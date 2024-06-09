@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .jadav
+        {
+            color:blue;
+            background: green;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- var = tag
+    var.method()
+    var.atribute -->
+
+    <h1 id="test">Heading</h1>
+
+    <i id="test1"></i>
+
+    <input type="text" id="inp">
+
+    <a href="c.html" id="anc">HELLO</a>
+     
+    <img src="x.jpg" alt="No image">
+
+
+    <script>
+
+      let h1_tag =  document.getElementById('test');
+
+      let i_tag =  document.getElementById('test1')
+
+      inp_tag = document.getElementById('inp')
+
+      a_tag = document.getElementById('anc')
+
+      a_tag.href = "mann.html"
+
+
+      inp_tag.value = a_tag.href 
+
+
+      console.log(h1_tag)
+      console.log(i_tag)
+      
+
+      h1_tag.style.color ="red"
+      h1_tag.style.fontSize = "80px"
+
+      i_tag.style.color="orange"
+
+    h1_tag.className = "jadav"  // direcy class name leke css apply karva sak te hai.
+
+    // h1_tag.classList.add("harsh")
+
+
+//  x = 12
+
+    i_tag.innerHTML = h1_tag.innerHTML 
+    
+    // alert(h1_tag.innerHTML) 
+    console.log(h1_tag.innerHTML)
+
+    h1_tag.innerHTML = i_tag.id
+
+    </script>
+    
+</body>
+</html>

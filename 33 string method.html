@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1 id="h1_tag"></h1>
+
+    <script>
+
+        text = "jadav Dharmesh jadav Dharmesh"
+
+
+        x = document.getElementById("h1_tag")
+
+        // x.innerHTML=text.slice(4)   // 4th character se cut karega.
+        // x.innerHTML=text.length  // text ke character count karega.
+
+        // x.innerHTML=text.replace("Dharmesh","ravi")       //replace only first match. & words is case sencetive.othervise not replace the workd.
+        // x.innerHTML=text.replaceAll("jadav","majama")     // sabhi same workds ko replace karega.words is case sencetive.othervise not replace the workd.
+
+
+        // x.innerHTML= text.replace(/dharmesh/i,"ravi");  // i= not cace sencetive.but match only for first words.
+        // x.innerHTML= text.replace(/jadav/g,"majama")   // g=globle sabhi same words ko replace karega. case sencetive.
+        x.innerHTML = text.replace(/JaDaV/ig, "majama")  // ig= without case sencetive & globle hai.sabhi ko pick karega.
+
+
+        x.innerHTML = text.toUpperCase();  // all charecter convert to uppercase
+        x.innerHTML = text.toLowerCase();  // all charecter convert to lowercase
+
+
+
+
+        text1 = "rajesh bhai"
+        text2 = text.concat("", text1)  // join two string value to use concat() mathod
+        x.innerHTML = text2
+
+
+
+        text3 = "    xyz      "
+        text4 = text3.trim()   //count only for 3 character length.trim() method removes whitespace from both sides of a string:
+        x.innerHTML = "text3 length=" + text3.length + " <br> text4.length=" + text4.length
+
+        text5 = text3.trimStart()  // starting se widespace remove karega.
+        text5 = text3.trimEnd()    // end main widespace remove karega.
+        x.innerHTML = text5.length
+
+
+        text6 = "5"
+        text7 = text6.padStart(9, "x")  /// 9 lenght tak 5 number ke age x add karega. kuch bhi add kar sak te hai.
+        text8 = text6.padEnd(7, "0")
+
+        x.innerHTML = text7
+        x.innerHTML = text8
+
+
+
+        text9 = "The rain in SPAIN stays mainly in the plain";
+
+        text10 = text9.match("AIN")  // match() will return only the first match in the string.case sencetive.
+        text10 = text9.match(/ain/g)  // globle search karega.
+        text10 = text9.match(/ain/ig)  //globle or without case sencetive search karega.
+
+        x.innerHTML = text10
+
+
+
+        text11 = "Hello world, welcome to the universe.";
+
+        text12 = text11.includes("welcome")
+        //includes method line ko search karke welcome word get karega.or milega to answer true dega.otherwise false dega.
+        // includes is case sencetive.
+
+        x.innerHTML = text12
+
+
+
+
+        // startsWith() & endswith() method***************
+
+        // ==>both are case sensative.
+        // ==> both  method returns true if a string begins with a specified value.Otherwise it returns false:
+
+        text13 = text11.startsWith("Hello")    // line Hello se start hogo to true return karega.
+        text13 = text11.startsWith("Hello", 0)  // string ki pissition bhi check karega.
+        text14 = text11.endsWith("universe.")  // line universe se end hogi to true return karega.
+        text14 = text11.endsWith("universe.", 37) // string kipossition bhi check karega.
+
+
+        x.innerHTML = text13
+        x.innerHTML = text14
+
+
+
+
+        x = "hello jadav*!"
+        document.write(x + "<br>")
+
+        document.write(x.slice(4) + "<br>")  // 4th character  se cut karega. ==>o jadav*!
+        document.write(x.slice(4, 8) + "<br>")  // first 4th charecter ko cut karaga. uske bad 5,6,7,8 charecter display kreg.==>oja
+        document.write(x.slice(-4) + "<br>")  // last se 4th character tak print hoga. ==> av*!
+
+        document.write("<hr>")
+
+        // slice==>  words ko pehle 4 se or bad main 8 se slice(mins=>cut) karke bich ke words display karega.
+
+
+        document.write(x.substr(4) + "<br>")   // 4th character se cut karega.  ==>o jadav*!
+        document.write(x.substr(4, 8) + "<br>")  // first 4th cherecter se cut karke vahi se 8th tak jayega.==>o jadav*
+        document.write(x.substr(-4) + "<br>")  // last se 4th character tak cut karaga.  ==>av*!
+
+        document.write("<hr>")
+
+
+        document.write(x.substring(4) + "<br>")  //firt 4th character cut karke uske bad ke character show karega.
+        document.write(x.substring(4, 8) + "<br>")
+        document.write(x.substring(-4) + "<br>") // not accepted.(mins value accept nahi karega.) ==> hello jadav*!(pura print kar dega.)
+
+
+        // ==> slice,substr,or substring (4) ==>   condition same hi apply hogi.
+        // ==> slice,substring (4,8) ==> conditon same hi.
+        // ==> slice,substr (-4) ==> condition same hi.
+
+
+        // ==> strings method use karne s;e main string changes nahi hogi.lekin ek new string return hogo
+
+
+
+
+
+        // another way to print strings:-
+
+        amount = "i have rs 1000"
+
+        console.log(amount.slice("i have rs ".length))    // string me se 1000 print karna hai.
+
+
+
+
+    </script>
+</body>
+
+</html>

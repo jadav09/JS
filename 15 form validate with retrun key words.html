@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<form>
+        Firstname: <input type="text" id="inp1" value="">
+        <span id="sp1" return></span>
+        <br><br>
+
+        Lastname:- <input type="text" id="inp2" value="">
+        <span id="sp2"></span>
+        <br><br>
+
+        <input type="submit" name="" id=""onclick="return x(),y()">
+    </form>
+
+
+    <script>
+
+        inp1_tag = document.getElementById("inp1")
+        inp2_tag = document.getElementById("inp2")
+        sp1_tag = document.getElementById("sp1")
+        sp2_tag = document.getElementById("sp2")
+
+
+        
+
+        function x()
+
+        {
+            if (inp1_tag.value =="")
+             {
+                sp1_tag.innerHTML="required"
+                sp1_tag.style.color="red"
+                inp1_tag.style.border="2px solid red"
+                return false
+                
+                // alert("required")
+                // return false
+            }
+
+            // form tag ki if vali conditon pe jab tak return false nahi likha hoga tab tak inp or span tak ki condition apply to hogo lekin turnat chali jayego.
+
+        // return false se data vapas form main jata hai or vaha se return ho ke vapas ata hia.
+        //ager hamne onclick vali conditon pe return nahi kiya hai to display pe if vali condition ka data turant chala hayega.
+
+            else
+            {
+                // alert("ok")
+                sp1_tag.innerHTML="ok"
+                sp1_tag.style.color="green"
+                inp1_tag.style.border="2px solid green"
+                return false
+
+
+            }
+        
+        }
+
+        function y() 
+        {
+            if (inp2_tag.value =="")
+
+             {
+                inp2_tag.style.border="2px solid red"
+                sp2_tag.innerHTML="required...!"
+                sp2_tag.style.color="red"
+                return false
+
+            }
+
+
+            else
+            {
+                // alert("ok")
+                sp2_tag.innerHTML="ok"
+                sp2_tag.style.color="green"
+                inp2_tag.style.border="2px solid green"
+                return false
+
+
+            }
+        }
+
+
+
+        console.log(inp_tag)
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        class info {
+
+            a1 = "!!hollo world!!"
+
+            fun1 = function ()   // Anonymous fun ko  without declare function name hum call nai karva sak te hai. 
+            {
+                var pan = 1234
+                var name = "xyz"
+                var phone = 3298099
+                var pin = 123409
+                console.log(pan)   // withouy declate new obj print nahi kar sak te.
+
+            }
+
+            fun2()                     // direct fun2() se call kiya ja sak ta hai. variable main stor karana hai to bhi kar sak te hai.
+            {
+                var pan = 457
+                var name = "abc"
+                var phone = 90898
+                var pin = 9808
+
+                console.log(name)
+            }
+
+            fun3 = () => {                       // arrow fun without variable name call nahi karva sakte hai.
+                console.log("Arrow fun")
+            }
+
+
+            fun4 = function T()            // variable main stor karna padega.
+            {
+                console.log("hello fun")
+            }
+
+            fun5() {
+                return "a"
+            }
+
+            static databese()        //static lagane se object iski value get nahi karsak ta. class kar sakta hai.
+            {
+                console.log("Privacy Protection")
+            }
+
+
+        }
+
+
+        const x = new info  // declare the class object.
+        const y = new info  // alg alg name bhi detalils access kar kar te ahi.
+        const z = new info
+
+
+        x.fun1()
+        x.fun2()
+        x.fun3()
+        x.fun4()
+        document.write(x.fun5())    // retrun ko always print karna padeda.
+
+        y.fun2()
+        z.fun4()
+
+        // x.a1         // direct variable nahi lika sakte. document/tag/console kar sak te hia.
+        console.log(x.a1)
+
+        // x.databese()   // static lagane se hum object se get nahi karsakte.
+        info.databese()
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

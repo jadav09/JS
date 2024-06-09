@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+
+.main
+{
+    display: grid;
+    place-items: center;
+}
+
+.data
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    font-size: 50px;
+    gap: 40px;
+    margin: 30px 0px;
+}
+.Number
+{
+    text-align: center;
+    background-color: powderblue;
+    padding:5px;
+    cursor: pointer;
+    
+}
+
+#inp
+{
+    height: 50px;
+    width: 400px;
+    font-size: 20px;
+}
+
+</style>
+
+    
+</head>
+
+<body>
+
+    <div class="main">
+
+        <input type="text" id="inp">
+
+        <div class="data">
+
+            <div class="Number" onclick="ac()">AC</div>
+            <div class="Number" onclick="del()">DEL</div>
+            <div class="Number" onclick="jadav('%')">%</div>
+            <div class="Number" onclick="jadav('+')">+</div>
+
+
+
+            <div class="Number" onclick="jadav('1')">1</div>
+            <div class="Number" onclick="jadav('2')">2</div>
+            <div class="Number" onclick="jadav('3')">3</div>
+            <div class="Number" onclick="jadav('/')">/</div>
+
+            <div class="Number" onclick="jadav('4')">4</div>
+            <div class="Number" onclick="jadav('5')">5</div>
+            <div class="Number" onclick="jadav('6')">6</div>
+            <div class="Number" onclick="jadav('*')">*</div>
+
+            
+            <div class="Number" onclick="jadav('7')">7</div>
+            <div class="Number" onclick="jadav('8')">8</div>
+            <div class="Number" onclick="jadav('9')">9</div>
+            <div class="Number" onclick="calc()">=</div>
+            <div class="Number" onclick="jadav('0')">0</div>
+
+
+        </div>
+
+    </div>
+
+    <script>
+
+inp_tag = document.getElementById('inp')
+
+
+
+        function jadav(x)
+        {
+            inp_tag.value=inp_tag.value + x
+            
+        }
+
+
+function ac()
+
+{
+inp_tag.value=""
+}
+
+function del()
+{
+    inp_tag.value=inp_tag.value.slice(0,-1)
+}
+
+function calc()
+{
+
+    inp_tag.value=eval(inp_tag.value)
+
+}
+
+
+        console.log(x)
+
+
+
+    </script>
+    
+</body>
+</html>

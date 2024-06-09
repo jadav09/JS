@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .main
+        {
+            background-color: gray;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 500px;
+            margin: 100px auto;
+            padding: 50px;
+            text-align: left;
+            font-family: cursive;
+        }
+
+    input
+    {
+        height: 20px;
+        width: 200px;
+    }
+
+    select
+    {
+        height: 30px;
+        width: 100px;
+    }
+
+    h3
+
+{
+    color:red;
+}
+
+
+    </style>
+</head>
+<body>
+
+    <div class="main">
+
+        <h1>corrency converter:</h1>
+
+        <div class="cnvt">
+
+            <h3>Amount to be convert</h3>
+
+            <input type="number" name="" id="num" placeholder="enter indian rupues">
+            <br><br>
+
+             <select name="" id="frm" onchange="dj()">
+
+                <option value="1.81">seclect curency</option>
+                <option value="1.81">yen</option>
+                <option value="1.111">rubal</option>
+                <option value="0.045">riyal</option>
+                <option value="1.315">taka</option>
+                <option value="15.625">won</option>
+                <option value="0.0037">dinar</option>
+                <option value="1">rupees</option>
+                <option value="0.00977">pound</option>
+                <option value="0.012">dollar</option>
+                <option value="0.011">euro</option>
+            </select>
+
+            
+            <br><br>
+
+              <span id="cvrt">Converted amount:-</span>
+              <br><br>
+
+
+        </div>
+
+    </div>
+
+    <script>
+
+num_tag = document.getElementById("num")
+form_tag = document.getElementById("frm")
+cvrt_tag =document.getElementById("cvrt")
+
+
+
+function dj()
+{
+    cvrt_tag.innerHTML= num_tag.value*form_tag.value
+}
+
+
+
+    </script>
+
+</body>
+
+</html>

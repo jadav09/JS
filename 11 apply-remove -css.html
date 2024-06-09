@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .xyz {
+            color: powderblue;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="d1">jadav</div>
+    <br>
+
+    <button class="b1" onclick="AddCSS()">AddCdd</button>
+    <button class="b2" onclick="RemoveCss()">RemoveCss</button>
+    <button class="b3" onclick="AddRemoveCSS()">AddRemoveCSS</button>
+
+
+</body>
+
+<script>
+
+    d1_tag = document.querySelector(".d1")
+
+
+
+    // d1_tag.style.backgroundColor="red"
+    // d1_tag.style.height="100px"
+    // d1_tag.style.width="290px"
+    // d1_tag.style.color="powderblue"
+    // d1_tag.style.lineHeight="100px"
+    // d1_tag.style.textAlign="center"
+    // d1_tag.style.fontSize="30px"
+
+    d1_tag.style.display = "none"
+
+
+
+    function AddCSS() {
+        d1_tag.style.backgroundColor = "red"
+        d1_tag.style.height = "100px"
+        d1_tag.style.width = "290px"
+        d1_tag.style.lineHeight = "100px"
+        d1_tag.style.textAlign = "center"
+        d1_tag.style.fontSize = "30px"
+        d1_tag.style.display = "block"
+
+        d1_tag.classList.add("xyz")
+        d1_tag.className = ("xyz")
+
+        // class name le ke bhi style add kar sak te hai
+
+
+    }
+
+    function RemoveCss() {
+        d1_tag.style.display = "none"
+    }
+
+
+    function AddRemoveCSS() 
+    
+    {
+
+        if (d1_tag.style.display == "none") 
+        
+        {
+            d1_tag.style.backgroundColor = "red"
+            d1_tag.style.height = "100px"
+            d1_tag.style.width = "290px"
+            d1_tag.style.lineHeight = "100px"
+            d1_tag.style.textAlign = "center"
+            d1_tag.style.fontSize = "30px"
+            d1_tag.style.display = "block"
+
+            d1_tag.classList.add("xyz")
+            d1_tag.className = ("xyz")
+        }
+
+        else 
+
+        {
+            d1_tag.style.display = "none"
+        }
+
+    }
+
+</script>
+
+</html>

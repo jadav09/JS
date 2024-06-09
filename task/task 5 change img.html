@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .main
+        {
+            position: relative;
+        }
+        img
+        {
+            height:300px;
+            width: 100%;
+            object-fit: cover;
+            
+        }
+
+        #btn1,
+        #btn2
+
+        {
+            position: absolute;
+            top: 25%;
+            left: 80%;
+            padding: 5px 20px;
+            border: none;
+            background: transparent;
+            color:powderblue;
+            font-size: 50px;
+        }
+
+        #btn2
+        {
+            top: 25%;
+            left: 10%;
+            color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="main">
+
+        <img src="1.jpg" alt="" id="img1">
+
+        <button onclick="change()" id="btn1"> &gt; </button>
+
+        <button onclick="prev1()" id="btn2"> &lt; </button>
+
+    </div>
+
+    <script>
+
+        img_tag = document.getElementById("img1")
+
+        function change()
+
+        {
+            if(img_tag.src.match("1.jpg"))
+            {
+                img_tag.src="2.jpg"
+            }
+
+            else if(img_tag.src.match("2. jpg"))
+            {
+                img_tag.src="3.jpg"
+            }
+
+            else if(img_tag.src.match("3.jpg"))
+            {
+                img_tag.src="4.jpg"
+            }
+            else
+            {
+                img_tag.src="1.jpg"
+            }
+
+            // setTimeout("chang()",1500)
+        }
+
+        function prev1()
+
+        {
+
+            if(img_tag.src.match("1.jpg"))
+            {
+             img_tag.src="4.jpg"
+            }
+
+            else if(img_tag.src.match("4.jpg"))
+            {
+                img_tag.src="3.jpg"
+            }
+
+            else if(img_tag.src.match("3.jpg"))
+            {
+                img_tag.src="2.jpg"
+            }
+
+            else
+            {
+                img_tag.src="1.jpg"
+            }
+            
+        }
+         console.log(img_tag)
+
+
+    </script>
+</body>
+</html>

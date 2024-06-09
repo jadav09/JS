@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        div 
+        {
+            position: relative;
+            height: 400px;
+        }
+
+        img 
+        {
+
+            height: 400px;
+            width: 100%;
+            
+        }
+        #btn1
+        {
+            position: absolute;
+            top:50%;
+            right:10%;
+            border: none;
+            padding: 5px 15px;
+            border-radius: 12px;
+            background: transparent;
+            box-shadow: 0 0 20px #fff inset;
+            font-size: 25px;
+            font-weight: bold;
+            font-family: cursive;
+            color:#fff;
+        }
+
+        #btn2
+        {
+            position: absolute;
+            top:50%;
+            left:10%;
+            border: none;
+            padding: 5px 15px;
+            border-radius: 12px;
+            background: transparent;
+            box-shadow: 0 0 20px #fff inset;
+            font-size: 25px;
+            font-weight: bold;
+            font-family: cursive;
+            color:#fff;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <img src="images/1.jpg" alt="" id="i1">
+        <button onclick="next()" id="btn1">next</button>
+        <button onclick="prev()" id="btn2">prev</button>
+    </div>
+
+        <script>
+            img1 = document.querySelector('#i1');
+
+            console.log(img1)
+            console.log(img1.src);//http://127.0.0.1:5500/i1.jpg
+
+           function next()
+           {
+                if( img1.src.match("images/1.jpg"))     //src without match() method work nahi karegi.
+                {
+                    img1.src ="images/2.jpg"
+                }
+
+                else if(img1.src.match("images/2.jpg"))
+                {
+                    img1.src ="images/3.jpg"
+                }
+
+                else if(img1.src.match("images/3.jpg"))
+                {
+                    img1.src ="images/4.jpg"
+                }
+
+                else 
+                {
+                    img1.src ="images/1.jpg"
+                }
+
+           }
+
+
+           function prev()
+           {
+                if( img1.src.match("images/1.jpg"))  
+                {
+                    img1.src ="images/4.jpg"
+                }
+
+                else if(img1.src.match("images/4.jpg"))
+                {
+                    img1.src ="images/3.jpg"
+                }
+
+                else if(img1.src.match("images/3.jpg"))
+                {
+                    img1.src ="images/2.jpg"
+                }
+
+                else 
+                {
+                    img1.src ="images/1.jpg"
+                }
+
+           }
+ 
+
+
+        </script>
+    
+</body>
+</html>

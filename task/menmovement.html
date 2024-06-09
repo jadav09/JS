@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="d1">
+        <img id="i" src="WhatsApp Image 2023-12-08 at 2.39.44 PM.jpg" alt="">
+    </div>
+    <button onclick="c()">click to move</button>
+
+
+
+    <script>
+        img_tag = document.getElementById("i")
+        d1_tag = document.querySelector(".d1")
+        
+    
+        img_tag.style.width="1000px"
+        img_tag.style.translate="-920px"
+        // img_tag.style.translate="400px"
+        // img_tag.style.transition="5s"
+    
+         d1_tag.style.width="50px"
+        //  d1_tag.style.border="3px solid red"
+         d1_tag.style.overflow="hidden"
+        //  d1_tag.style.border="3px solid red"
+        d1_tag.style.marginLeft="500px"
+
+
+function c()
+{
+    
+    img_tag.style.translate="800px"
+        img_tag.style.transition="10s"
+}
+    
+        console.log(d1_tag)
+    
+    
+    
+    </script>
+
+</body>
+
+
+    
+</html>

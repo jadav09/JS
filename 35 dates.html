@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="date"></h1>
+
+    <script>
+
+
+        //Creating Date Objects
+        //There are 9 ways to create a new date object:
+
+
+// new Date()
+// new Date(date string)
+// new Date(year,month)
+// new Date(year,month,day)
+// new Date(year,month,day,hours)
+// new Date(year,month,day,hours,minutes)
+// new Date(year,month,day,hours,minutes,seconds)
+// new Date(year,month,day,hours,minutes,seconds,ms)
+// new Date(milliseconds)
+
+h1_tag = document.getElementById("date")
+
+h1_tag.innerHTML =new Date()   //A date object can be created with a specified date and time:
+
+
+
+// JavaScript counts months from 0 to 11:
+
+// January = 0.
+
+// December = 11.
+
+
+
+h1_tag.innerHTML=new Date(2024,0,1,6,45,54,0)  //7 numbers specify year, month, day, hour, minute, second, and millisecond (in that order):
+
+h1_tag.innerHTML = new Date(2024)    //You cannot omit month. If you supply only one parameter it will be treated as milliseconds
+                                     // direct numbers counting in milisecouds. (1000 milisecounds = 1sec) add into 1 jan 1970.
+
+
+h1_tag.innerHTML =new Date("2014")        // ISO dates can be written without month and day (YYYY):
+h1_tag.innerHTML =new Date("2020-02-28")  // using in string formate:- YYYY-MM-DD
+h1_tag.innerHTML =new Date("2021/02/22")  // using in string formate:- YYYY-MM-DD
+
+h1_tag.innerHTML =new Date("2015-09") 
+
+h1_tag.innerHTML =new Date("mar 20 2019")    //ong dates are most often written with a "MMM DD YYYY" syntax like this:
+ h1_tag.innerHTML =new Date("20 apr 2019")    // Month and day can be in any order:
+
+ h1_tag.innerHTML =new Date("january 14 2024") //  month can be written in full (January), or abbreviated (Jan): month names are case Innsitive.
+
+
+
+
+
+
+
+
+                               
+// JavaScript stores dates as number of milliseconds since January 01, 1970.
+
+// Zero time is January 01, 1970 00:00:00 UTC.
+
+// One day (24 hours) is 86 400 000 milliseconds.
+
+// Now the time is: 1704451488695 milliseconds past January 01, 1970
+
+
+h1_tag.innerHTML=new Date(24*60*60*1000)   //  anuary 01 1970 plus 24 hours is: 86400000 milisecounds
+
+nd = new Date()
+h1_tag.innerHTML = nd.toDateString()   // concert a date to date string.
+
+
+h1_tag.innerHTML = Date.parse("jan 14 2024")   // Date.parse() method convert date into milisecounds
+
+
+
+
+//js date get method:-
+
+
+// ==> getFullYear()
+
+
+h1_tag.innerHTML=new Date().getFullYear()  //2024
+
+nd3 = new Date("mar 14 2020")
+
+h1_tag.innerHTML = nd3.getFullYear()   //2020
+
+
+//==> getMonth()
+
+h1_tag.innerHTML =new Date().getMonth()  // count 0-11  0-jan 11-dec
+
+h1_tag.innerHTML = nd3.getMonth() + 1  // add 1 to get correct month
+
+
+
+//==> getdate()     :- returns the day of a date as a number (1-31):
+
+
+
+h1_tag.innerHTML=new Date().getDate()  // get the corrent time date
+
+h1_tag.innerHTML = nd3.getDate()      // get date manually.
+
+
+
+// ==>getHours()  :- returns the hours of a date as a number (0-23):
+
+
+
+h1_tag.innerHTML =new Date().getHours()  // get corret date hours
+
+nd4 =new Date (2012,5,21,2,29,56,90)
+
+h1_tag.innerHTML =nd4.getHours()   // get the hours manually.
+
+
+
+// ==>getMinutes()
+
+
+h1_tag.innerHTML=new Date().getMinutes()  //get corret minutes/
+
+h1_tag.innerHTML=nd4.getMinutes()  // get the minutes manually.
+
+
+//  ==>getSecounds()   return number with (0-59)
+
+h1_tag.innerHTML = new Date().getSeconds()  
+h1_tag.innerHTML = nd4.getSeconds()  
+
+h1_tag.innerHTML = new Date().getMilliseconds()  // get the millisecounds  (0-999)
+h1_tag.innerHTML = nd4.getMilliseconds()  // get the millisecounds
+
+
+
+//==> getDay()
+
+// The getDay() method returns the weekday of a date as a number (0-6).
+// In JavaScript, the first day of the week (day 0) is Sunday.
+// Some countries in the world consider the first day of the week to be Monday.
+
+
+h1_tag.innerHTML = new Date().getDay()    // get the corrent day
+h1_tag.innerHTML=nd4.getDay()             // manually get te day
+
+
+// h1_tag.innerHTML = new Date().getTime()   //corrent time in millisecounds.  since midnight 1-1-1970
+// h1_tag.innerHTML = nd4.getTime()          // manually get the time.
+
+
+// h1_tag.innerHTML = Date.now()     // returns the number of milliseconds since January 1, 1970.
+
+
+
+//UTC date get mothod as same as get date() method  
+
+//for Examples:-
+
+//getUTCFullYear() = getFullYear()
+
+//The getTimezoneOffset() method returns the difference (in minutes) between local time an UTC time:
+
+h1_tag.innerHTML = new Date().getTimezoneOffset()
+
+
+
+    </script>
+    
+</body>
+</html>

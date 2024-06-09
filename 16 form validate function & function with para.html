@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        input
+        {
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+<form >
+
+        
+    First Name:- <input type="text" id="inp"onblur="xyz(inp,sp)">
+    <span id="sp"></span>
+    <br><br>
+
+    Last Name:- <input type="text" name="" id="inp2" onblur="xyz(inp2,sp2)">
+    <span id="sp2"></span>
+    <br><br>
+
+
+    
+    <input type="submit" name="" id="" value="validate">
+
+
+</form>
+
+</body>
+
+<script>
+
+    // inp_tag = document.getElementById("inp")
+    // sp_tag = document.getElementById("sp")
+
+    // inp2_tag = document.getElementById("inp2")
+    // sp2_tag = document.getElementById("sp2")
+
+    // inp2_tag.style.outline="none"
+    // inp_tag.style.outline="none"
+   
+    // function getvalue()
+
+    // {
+    //     if(inp_tag.value=="")
+    //     {
+    //         sp_tag.innerHTML="*Required"
+    //         sp_tag.style.color="red"
+    //         inp_tag.style.border="2px solid red"
+
+    //     }
+    //     else
+    //     {
+    //         sp_tag.innerHTML=""
+    //         inp_tag.style.border="2px solid green"
+
+    //     }
+    // }
+
+    
+    // function jadav()
+
+    // {
+    //     if(inp2_tag.value=="")
+    //     {
+    //         sp2_tag.innerHTML="*Required"
+    //         sp2_tag.style.color="red"
+    //         inp2_tag.style.border="2px solid red"
+
+    //     }
+    //     else
+    //     {
+    //         sp2_tag.innerHTML=""
+    //         inp2_tag.style.border="2px solid green"
+    //     }
+    // }
+    
+    // exp_tag=/[a-zA-Z]+/  ==> wo text or number mix karenge to work nahi karega.
+
+    // exp_tag=/^[a-zA-Z]+$/  ==> text or number mix karenge tab bhi alter dega.
+
+    exp_tag =/^[a-zA-Z]{5,15}$/ //==> min or max character count karega.
+
+
+
+    function xyz(x,y)
+    
+    {
+        if(x.value=="")
+        {
+            y.innerHTML="*Requiared"
+            y.style.color="red"
+            x.style.border="2px solid red"   
+        }
+
+        else if(!exp_tag.test(x.value))
+
+        // match the value in exp_tag.test built in mathod
+        {
+            y.innerHTML="only allow a-zA-Z & min-5 or max-15 characters"
+            y.style.color="red"
+            x.style.border="2px solid red"
+        }
+
+
+        else
+        {
+            y.innerHTML=" "
+            x.style.border="2px solid green"
+
+        }
+        
+
+
+    }
+    
+
+    // ==> function with para mai hum withoud id get kiye bina work karsak te ahi.
+    // ==> age hamare pas ek se jyada tag hai or hame ek hi condition base work karna hai use funtion with para consept.
+    // (withoud pera => 5 input tag hai to 5 bar id get or 5 bar if conditon lagrgi. )
+    // ==> function with pera main hum direct function name hi id call kavate hai
+    // ==>
+
+</script>
+
+</html> 
